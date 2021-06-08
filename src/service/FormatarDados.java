@@ -14,7 +14,7 @@ public class FormatarDados {
 
         try {
             DateFormat formatBR = new SimpleDateFormat("dd/MM/yyyy");
-            Date date = formatBR.parse(dataNasc);
+            Date date = formatBR.parse(getDataFormatado(dataNasc));
             DateFormat formatUS = new SimpleDateFormat("yyyy-MM-dd");
             String dataConvertida = formatUS.format(date);
             return LocalDate.parse(dataConvertida);
@@ -24,7 +24,7 @@ public class FormatarDados {
         return null;
     }
 
-    public static String gerFoneFormatado(String fone) {
+    public static String getFoneFormatado(String fone) {
         fone = fone.replaceAll("[^0-9]", "");
         MaskFormatter mask;
         try {
@@ -87,5 +87,22 @@ public class FormatarDados {
             e.printStackTrace();
         }
         return CEP;
+    }
+
+    public static String getDataFormatado(String data) {
+        data = data.replaceAll("[^0-9]", "");
+        MaskFormatter mask;
+        try {
+            mask = new MaskFormatter("##/##/####");
+            mask.setValueContainsLiteralCharacters(false);
+            if(!data.equals("")) {
+                return mask.valueToString(data);
+            }
+            return null;
+
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return data;
     }
 }

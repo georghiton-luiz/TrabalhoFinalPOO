@@ -11,7 +11,7 @@ public class ConexaoDAO {
 	private Connection con;
 	private static ConexaoDAO conexaoService;
 
-	public ConexaoDAO() {
+	private ConexaoDAO() {
 		String url = "jdbc:postgresql://localhost:5432/trabalho_final_poo";
 		String usuario = "postgres";
 		String senha = "root";

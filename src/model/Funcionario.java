@@ -2,34 +2,38 @@ package model;
 
 import java.time.LocalDate;
 
-public class Funcionario {
+public class Funcionario extends Endereco{
 
 	private Integer codigo;
 	private String nome;
-	private String endereco;
 	private LocalDate dataNascimento;
 	private String CPF;
 	private String fone;
 	private String celular;
 	private String email;
 	private String redeSocial;
-	
-	
+	private String userName;
+	private String senha;
+
+
 	public Funcionario() {
-		
+
 	}
 
-	public Funcionario(int codigo, String nome, String endereco, LocalDate dataNascimento, String CPF, String fone, String celular,
-					   String email, String redeSocial) {
+	public Funcionario(Integer codigo, String nome, LocalDate dataNascimento, String CPF, String logradouro, String num, String bairro,
+					   String cidade, String uf, String complemento, String CEP, String fone, String celular, String email,
+					   String redeSocial, String userName, String senha) {
+		super(logradouro, num, bairro, cidade, uf, complemento, CEP);
 		this.codigo = codigo;
 		this.nome = nome;
-		this.endereco = endereco;
 		this.dataNascimento = dataNascimento;
 		this.CPF = CPF;
 		this.fone = fone;
 		this.celular = celular;
 		this.email = email;
 		this.redeSocial = redeSocial;
+		this.userName = userName;
+		this.senha = senha;
 	}
 
 	public Integer getCodigo() {
@@ -46,14 +50,6 @@ public class Funcionario {
 
 	public void setNome(String nome) {
 		this.nome = nome;
-	}
-
-	public String getEndereco() {
-		return endereco;
-	}
-
-	public void setEndereco(String endereco) {
-		this.endereco = endereco;
 	}
 
 	public LocalDate getDataNascimento() {
@@ -102,6 +98,21 @@ public class Funcionario {
 
 	public void setRedeSocial(String redeSocial) {
 		this.redeSocial = redeSocial;
-	}		
+	}
 
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
+	public String getSenha() {
+		return senha;
+	}
+
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
 }
