@@ -9,7 +9,9 @@ public class PesquisarFuncionario {
 
     public static boolean pesquisarFuncionario(Integer cod){
 
-        String query = "select * from cad_funcionario where id_fun = "+ cod +"";
+        ConexaoDAO.getInstance();
+
+        String query = "select * from funcionario where cod_fun = "+ cod +"";
         ResultSet rs = ConexaoDAO.getInstance().executaBusca(query);
 
         try {

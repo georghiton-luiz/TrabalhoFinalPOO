@@ -1,100 +1,103 @@
 package service;
 
+import model.Funcionario;
+import model.PontoDeVenda;
+import model.Produtos;
+
 import java.util.Objects;
 
-public class ProtudoCadastrado {
+public class ProtudoCadastrado extends Produtos {
 
-    private static Integer codProduto;
-    private static Integer codPtVenda;
-    private static String categoriaProduto;
-    private static String tipoProduto;
-    private static String tamanhoProduto;
-    private static String modeloProduto;
-    private static String corProduto;
-    private static String descricaoProduto;
-    private static Integer qtdProduto;
-    private static Double precoProduto;
+    private static ProtudoCadastrado protudoCadastradoService;
 
     private ProtudoCadastrado() {
     }
 
-    public static Integer getCodProduto() {
-        return codProduto;
+    public Integer getCodigo() {
+        return super.getCodigo();
     }
 
-    public static void setCodProduto(Integer codProduto) {
-        ProtudoCadastrado.codProduto = codProduto;
+    public void setCodigo(Integer codigo) {
+        super.setCodigo(codigo);
     }
 
-    public static Integer getCodPtVenda() {
-        return codPtVenda;
+    public String getCategoria() {
+        return super.getCategoria();
     }
 
-    public static void setCodPtVenda(Integer codPtVenda) {
-        ProtudoCadastrado.codPtVenda = codPtVenda;
+    public void setCategoria(String categoria) {
+        super.setCategoria(categoria);
     }
 
-    public static String getCategoriaProduto() {
-        return categoriaProduto;
+    public String getTipo() {
+        return super.getTipo();
     }
 
-    public static void setCategoriaProduto(String categoriaProduto) {
-        ProtudoCadastrado.categoriaProduto = categoriaProduto;
+    public void setTipo(String tipo) {
+        super.setTipo(tipo);
     }
 
-    public static String getTipoProduto() {
-        return tipoProduto;
+    public String getTamanho() {
+        return super.getTamanho();
     }
 
-    public static void setTipoProduto(String tipoProduto) {
-        ProtudoCadastrado.tipoProduto = tipoProduto;
+    public void setTamanho(String tamanho) {
+        super.setTamanho(tamanho);
     }
 
-    public static String getTamanhoProduto() {
-        return tamanhoProduto;
+    public String getModelo() {
+        return super.getModelo();
     }
 
-    public static void setTamanhoProduto(String tamanhoProduto) {
-        ProtudoCadastrado.tamanhoProduto = tamanhoProduto;
+    public void setModelo(String modelo) {
+        super.setModelo(modelo);
     }
 
-    public static String getModeloProduto() {
-        return modeloProduto;
+    public String getCor() {
+        return super.getCor();
     }
 
-    public static void setModeloProduto(String modeloProduto) {
-        ProtudoCadastrado.modeloProduto = modeloProduto;
+    public void setCor(String cor) {
+        super.setCor(cor);
     }
 
-    public static String getCorProduto() {
-        return corProduto;
+    public Integer getQuantidade() {
+        return super.getQuantidade();
     }
 
-    public static void setCorProduto(String corProduto) {
-        ProtudoCadastrado.corProduto = corProduto;
+    public void setQuantidade(Integer quantidade) {
+        super.setQuantidade(quantidade);
     }
 
-    public static String getDescricaoProduto() {
-        return descricaoProduto;
+    public String getDescricao() {
+        return super.getDescricao();
     }
 
-    public static void setDescricaoProduto(String descricaoProduto) {
-        ProtudoCadastrado.descricaoProduto = descricaoProduto;
+    public void setDescricao(String descricao) {
+        super.setDescricao(descricao);
     }
 
-    public static Integer getQtdProduto() {
-        return qtdProduto;
+    public Double getPreco() {
+        return super.getPreco();
     }
 
-    public static void setQtdProduto(Integer qtdProduto) {
-        ProtudoCadastrado.qtdProduto = qtdProduto;
+    public void setPreco(Double preco) {
+        super.setPreco(preco);
     }
 
-    public static Double getPrecoProduto() {
-        return precoProduto;
+    public PontoDeVenda getPontoDeVenda() {
+        return super.getPontoDeVenda();
     }
 
-    public static void setPrecoProduto(Double precoProduto) {
-        ProtudoCadastrado.precoProduto = precoProduto;
+    public void setPontoDeVenda(PontoDeVenda ptVenda) {
+        super.setPontoDeVenda(ptVenda);
+    }
+
+    public static ProtudoCadastrado getInstance() {
+        if (Objects.nonNull(protudoCadastradoService)) {
+            return protudoCadastradoService;
+        }
+        protudoCadastradoService = new ProtudoCadastrado();
+        return protudoCadastradoService;
     }
 }

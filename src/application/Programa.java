@@ -6,7 +6,9 @@ public class Programa {
 
     public static void main(String[] args) {
 
-        Cadastro.cadFuncionario();
+        //Cadastro.cadFuncionario();
+        //Cadastro.cadPtVenda();
+        Cadastro.cadProduto();
 
     }
 }

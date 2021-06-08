@@ -18,7 +18,8 @@ public class Produtos {
 	}
 
 
-	public Produtos(int codigo, String categoria, String tipo, String tamanho, String modelo, String cor, int quantidade, String descricao, double preco) {
+	public Produtos(Integer codigo, String categoria, String tipo, String tamanho, String modelo, String cor, Integer quantidade, String descricao,
+					Double preco, PontoDeVenda pontoDeVenda) {
 		this.codigo = codigo;
 		this.categoria = categoria;
 		this.tipo = tipo;
@@ -28,6 +29,7 @@ public class Produtos {
 		this.quantidade = quantidade;
 		this.descricao = descricao;
 		this.preco = preco;
+		this.pontoDeVenda = pontoDeVenda;
 	}
 
 	public Integer getCodigo() {
@@ -82,6 +84,10 @@ public class Produtos {
 		return quantidade;
 	}
 
+	public void setQuantidade(Integer quantidade) {
+		this.quantidade = quantidade;
+	}
+
 	public String getDescricao() {
 		return descricao;
 	}
@@ -104,6 +110,13 @@ public class Produtos {
 
 	public void setPontoDeVenda(PontoDeVenda pontoDeVenda) {
 		this.pontoDeVenda = pontoDeVenda;
-	}	
-	
+	}
+
+	public Integer abastecerEstoque(Integer qtd){
+		return getQuantidade() + qtd;
+	}
+
+	public Integer retirardaEstoque(Integer qtd){
+		return getQuantidade() - qtd;
+	}
 }

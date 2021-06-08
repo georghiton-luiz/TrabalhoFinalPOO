@@ -1,11 +1,9 @@
 package service;
 
-import repository.CadastroDAO;
-import repository.PesquisarCpfDAO;
+import repository.*;
 import model.Funcionario;
 import model.PontoDeVenda;
 import model.Produtos;
-import repository.PesquisarFuncionario;
 
 import javax.swing.*;
 import java.time.LocalDate;
@@ -22,16 +20,24 @@ public class Cadastro {
 
 	public static void cadProduto() {
 
-		produto = new Produtos(
-				Integer.parseInt(JOptionPane.showInputDialog("Código do produto")),
-				JOptionPane.showInputDialog("Categoria"),
-		        JOptionPane.showInputDialog("Tipo"),
-				JOptionPane.showInputDialog("Tamanho").toUpperCase(),
-				JOptionPane.showInputDialog("Modelo"),
-				JOptionPane.showInputDialog("Cor"),
-				Integer.parseInt(JOptionPane.showInputDialog(null, "Quantidade")),
-				JOptionPane.showInputDialog("Descrição do produto"),
-				Double.parseDouble(JOptionPane.showInputDialog("Preço R$")));
+
+		Integer cod = Integer.parseInt(JOptionPane.showInputDialog("Código do produto"));
+		String categoria = JOptionPane.showInputDialog("Categoria");
+		String tipo = JOptionPane.showInputDialog("Tipo");
+		String tamanho = JOptionPane.showInputDialog("Tamanho").toUpperCase();
+		String modelo = JOptionPane.showInputDialog("Modelo");
+		String cor = JOptionPane.showInputDialog("Cor");
+		Integer qtd = Integer.parseInt(JOptionPane.showInputDialog(null, "Quantidade"));
+		String descricao = JOptionPane.showInputDialog("Descrição do produto");
+		Double preco = Double.parseDouble(JOptionPane.showInputDialog("Preço R$"));
+
+		PontoDeVendaCadastrado ptVenda = PontoDeVendaCadastrado.getInstance();
+		Integer codPtVenda = Integer.parseInt(JOptionPane.showInputDialog("Código o Ponto de venda cadastrado"));
+		if(PesquisarPontoDeVenda.pesquisarPontoDeVenda(codPtVenda)){
+			produto = new Produtos(cod, categoria, tipo, tamanho, modelo, cor, qtd, descricao, preco, ptVenda);
+		}else{
+			JOptionPane.showMessageDialog(null, "Ponto de venda não encontrado \nCadastre um ponto de venda");
+		}
 		CadastroDAO.cadastrarProduto(produto);
 	}
 

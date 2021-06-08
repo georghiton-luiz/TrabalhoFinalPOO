@@ -46,6 +46,7 @@ public class ConexaoDAO {
 	public ResultSet executaBusca(String query) {
 
 		try {
+
 			Statement stm = con.createStatement();
 
 			return stm.executeQuery(query);

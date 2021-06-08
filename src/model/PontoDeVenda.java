@@ -7,6 +7,7 @@ public class PontoDeVenda extends Endereco{
 	private String celular;
 	private String email;
 	private Funcionario funcionario;
+	private Produtos produto;
 		
 	public PontoDeVenda() {
 		
@@ -20,6 +21,16 @@ public class PontoDeVenda extends Endereco{
 		this.celular = celular;
 		this.email = email;
 		this.funcionario = funcionario;
+	}
+
+	public PontoDeVenda(Integer codigo, String logradouro, String num, String bairro, String cidade, String uf, String complemento, String CEP,
+						String fone, String celular, String email, Produtos produto) {
+		super(logradouro, num, bairro, cidade, uf, complemento, CEP);
+		this.codigo = codigo;
+		this.fone = fone;
+		this.celular = celular;
+		this.email = email;
+		this.produto = produto;
 	}
 
 	public Integer getCodigo() {

@@ -5,6 +5,8 @@ import model.Funcionario;
 import model.PontoDeVenda;
 import model.Produtos;
 
+import javax.swing.*;
+
 public class CadastroDAO {
 		
 	public static void cadastrarProduto(Produtos produto) {
@@ -18,11 +20,12 @@ public class CadastroDAO {
 				+ "','" + produto.getCor() + "','" + produto.getDescricao() + "','" + produto.getQuantidade() + "','"	+ produto.getPreco() + "')";
 		ConexaoDAO.getInstance().executaSQL(queryProduto);
 		ConexaoDAO.getInstance().fecharConexao();
+		JOptionPane.showMessageDialog(null, "Cadastro realizado");
 	}
 	
 	public static void cadastrarPontoDeVenda(PontoDeVenda pontoDeVenda) {
 
-		String query = "INSERT INTO ponto_de_venda (cod_ptVenda, cod_fun, logradouro, cpf_fun, logradouro_ptVenda, num_ptVenda, bairro_ptVenda, " +
+		String query = "INSERT INTO ponto_de_venda (cod_ptVenda, cod_fun, logradouro_ptVenda, num_ptVenda, bairro_ptVenda, " +
 				"cidade_ptVenda, uf_ptVenda, compl_ptVenda, cep_ptVenda, fone_ptVenda, celular_ptVenda, email_ptVenda)values"
 				+ "('" + pontoDeVenda.getCodigo() + "','" + pontoDeVenda.getFuncionario().getCodigo() + "','" + pontoDeVenda.getLogradouro()
 				+ "','" + pontoDeVenda.getNum() + "','" + pontoDeVenda.getBairro() + "','" + pontoDeVenda.getCidade()
@@ -30,17 +33,20 @@ public class CadastroDAO {
 				+ "','" + pontoDeVenda.getCelular() + "','" + pontoDeVenda.getEmail() + "')";
 		ConexaoDAO.getInstance().executaSQL(query);
 		ConexaoDAO.getInstance().fecharConexao();
+		JOptionPane.showMessageDialog(null, "Cadastro realizado");
 	}
 
 	public static void cadastrarFuncionario(Funcionario funcionario){
 
 		String query = "INSERT INTO funcionario (cod_fun, nome_fun, data_nasc_fun, cpf_fun, logradouro_fun, num_fun, bairro_fun, cidade_fun, uf_fun, compl_fun, cep_fun, " +
-				"fone_fun, celular_fun, email_fun, rede_sociais_fun)values"
+				"fone_fun, celular_fun, email_fun, redesociais_fun, username_fun, senha_fun)values"
 				+ "('" + funcionario.getCodigo() + "','" + funcionario.getNome() + "','" + funcionario.getDataNascimento() + "','" + funcionario.getCPF()
 				+ "','" + funcionario.getLogradouro() + "','" + funcionario.getNum() + "','" + funcionario.getBairro() + "','" + funcionario.getCidade()
 				+ "','" + funcionario.getUf() + "','" + funcionario.getComplemento() + "','" + funcionario.getCEP() + "','"	+ funcionario.getFone()
-				+ "','" + funcionario.getCelular() + "','" + funcionario.getEmail() + "','" + funcionario.getRedeSocial() +"')";
+				+ "','" + funcionario.getCelular() + "','" + funcionario.getEmail() + "','" + funcionario.getRedeSocial()
+				+ "','" + funcionario.getUserName() + "','" + funcionario.getSenha() +"')";
 		ConexaoDAO.getInstance().executaSQL(query);
 		ConexaoDAO.getInstance().fecharConexao();
+		JOptionPane.showMessageDialog(null, "Cadastro realizado");
 	}
 }
