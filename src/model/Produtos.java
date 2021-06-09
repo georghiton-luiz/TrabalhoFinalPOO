@@ -1,5 +1,8 @@
 package model;
 
+import service.PontoDeVendaCadastrado;
+import service.ProtudoCadastrado;
+
 public class Produtos {
 
 	private Integer codigo;
@@ -112,11 +115,19 @@ public class Produtos {
 		this.pontoDeVenda = pontoDeVenda;
 	}
 
-	public Integer abastecerEstoque(Integer qtd){
-		return getQuantidade() + qtd;
-	}
-
-	public Integer retirardaEstoque(Integer qtd){
-		return getQuantidade() - qtd;
+	@Override
+	public String toString() {
+		return "Produtos:" +
+				"\nCódigo = " + codigo +
+				"\nCategoria = " + categoria +
+				"\nTipo = " + tipo +
+				"\nTamanho = " + tamanho +
+				"\nModelo = " + modelo +
+				"\nCor = " + cor +
+				"\nQuantidade = " + quantidade +
+				"\nPreco = " + preco +
+				"\nDescricao = " + descricao +
+				"\nCódigo ponto de venda = " + PontoDeVendaCadastrado.getInstance().getCodigo() +
+				"\n----------------------------------------------";
 	}
 }

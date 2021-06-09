@@ -19,7 +19,6 @@ public class CadastroDAO {
 				+ "','" + produto.getTipo() + "','" + produto.getTamanho() + "','" + produto.getModelo()
 				+ "','" + produto.getCor() + "','" + produto.getDescricao() + "','" + produto.getQuantidade() + "','"	+ produto.getPreco() + "')";
 		ConexaoDAO.getInstance().executaSQL(queryProduto);
-		ConexaoDAO.getInstance().fecharConexao();
 		JOptionPane.showMessageDialog(null, "Cadastro realizado");
 	}
 	
@@ -32,7 +31,6 @@ public class CadastroDAO {
 				+ "','" + pontoDeVenda.getUf() + "','" + pontoDeVenda.getComplemento() + "','" + pontoDeVenda.getCEP() + "','"	+ pontoDeVenda.getFone()
 				+ "','" + pontoDeVenda.getCelular() + "','" + pontoDeVenda.getEmail() + "')";
 		ConexaoDAO.getInstance().executaSQL(query);
-		ConexaoDAO.getInstance().fecharConexao();
 		JOptionPane.showMessageDialog(null, "Cadastro realizado");
 	}
 
@@ -46,7 +44,6 @@ public class CadastroDAO {
 				+ "','" + funcionario.getCelular() + "','" + funcionario.getEmail() + "','" + funcionario.getRedeSocial()
 				+ "','" + funcionario.getUserName() + "','" + funcionario.getSenha() +"')";
 		ConexaoDAO.getInstance().executaSQL(query);
-		ConexaoDAO.getInstance().fecharConexao();
 		JOptionPane.showMessageDialog(null, "Cadastro realizado");
 	}
 }

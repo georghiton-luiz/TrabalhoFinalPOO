@@ -72,4 +72,12 @@ public class PontoDeVenda extends Endereco{
 	public void setFuncionario(Funcionario funcionario) {
 		this.funcionario = funcionario;
 	}
+
+	public Produtos getProduto() {
+		return produto;
+	}
+
+	public void setProduto(Produtos produto) {
+		this.produto = produto;
+	}
 }

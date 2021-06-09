@@ -1,5 +1,7 @@
 package application;
 
+import controller.MenuListaProduto;
+import controller.MenuPrincipal;
 import service.Cadastro;
 
 public class Programa {
@@ -8,7 +10,8 @@ public class Programa {
 
         //Cadastro.cadFuncionario();
         //Cadastro.cadPtVenda();
-        Cadastro.cadProduto();
+        //Cadastro.cadProduto();
+        MenuPrincipal.menuPrincipal();
 
     }
 }

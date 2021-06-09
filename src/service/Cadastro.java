@@ -22,13 +22,13 @@ public class Cadastro {
 
 
 		Integer cod = Integer.parseInt(JOptionPane.showInputDialog("Código do produto"));
-		String categoria = JOptionPane.showInputDialog("Categoria");
-		String tipo = JOptionPane.showInputDialog("Tipo");
+		String categoria = JOptionPane.showInputDialog("Categoria").toUpperCase();
+		String tipo = JOptionPane.showInputDialog("Tipo").toUpperCase();
 		String tamanho = JOptionPane.showInputDialog("Tamanho").toUpperCase();
-		String modelo = JOptionPane.showInputDialog("Modelo");
-		String cor = JOptionPane.showInputDialog("Cor");
+		String modelo = JOptionPane.showInputDialog("Modelo").toUpperCase();
+		String cor = JOptionPane.showInputDialog("Cor").toUpperCase();
 		Integer qtd = Integer.parseInt(JOptionPane.showInputDialog(null, "Quantidade"));
-		String descricao = JOptionPane.showInputDialog("Descrição do produto");
+		String descricao = JOptionPane.showInputDialog("Descrição do produto").toUpperCase();
 		Double preco = Double.parseDouble(JOptionPane.showInputDialog("Preço R$"));
 
 		PontoDeVendaCadastrado ptVenda = PontoDeVendaCadastrado.getInstance();

@@ -24,13 +24,14 @@ public class PesquisarPontoDeVenda {
                 PontoDeVendaCadastrado.getInstance().setLogradouro(rs.getString("logradouro_ptvenda"));
                 PontoDeVendaCadastrado.getInstance().setNum(rs.getString("num_ptvenda"));
                 PontoDeVendaCadastrado.getInstance().setBairro(rs.getString("bairro_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setCidade(rs.getString("cidade_prvenda"));
+                PontoDeVendaCadastrado.getInstance().setCidade(rs.getString("cidade_ptvenda"));
                 PontoDeVendaCadastrado.getInstance().setCidade(rs.getString("uf_ptvenda"));
                 PontoDeVendaCadastrado.getInstance().setComplemento(rs.getString("compl_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setCEP(rs.getString("cep_prvenda"));
+                PontoDeVendaCadastrado.getInstance().setCEP(rs.getString("cep_ptvenda"));
                 PontoDeVendaCadastrado.getInstance().setFone(rs.getString("fone_ptvenda"));
                 PontoDeVendaCadastrado.getInstance().setCelular(rs.getString("celular_ptvenda"));
                 PontoDeVendaCadastrado.getInstance().setEmail(rs.getString("email_ptvenda"));
+                PesquisarFuncionario.pesquisarFuncionario(rs.getInt("cod_fun"));
             }
             return PontoDeVendaCadastrado.getInstance().getCodigo().equals(cod);
         } catch (SQLException e) {

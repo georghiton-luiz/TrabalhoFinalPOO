@@ -1,14 +1,16 @@
 package service;
 
-import model.Funcionario;
 import model.PontoDeVenda;
 import model.Produtos;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class ProtudoCadastrado extends Produtos {
 
     private static ProtudoCadastrado protudoCadastradoService;
+    private static List<ProtudoCadastrado> listarProduto = new ArrayList<>();
 
     private ProtudoCadastrado() {
     }
@@ -91,6 +93,14 @@ public class ProtudoCadastrado extends Produtos {
 
     public void setPontoDeVenda(PontoDeVenda ptVenda) {
         super.setPontoDeVenda(ptVenda);
+    }
+
+    public static List<ProtudoCadastrado> getListarProduto() {
+        return listarProduto;
+    }
+
+    public static void setListarProduto(List<ProtudoCadastrado> listarProduto) {
+        ProtudoCadastrado.listarProduto = listarProduto;
     }
 
     public static ProtudoCadastrado getInstance() {
