@@ -39,6 +39,7 @@ public class Cadastro {
 			JOptionPane.showMessageDialog(null, "Ponto de venda não encontrado \nCadastre um ponto de venda");
 		}
 		CadastroDAO.cadastrarProduto(produto);
+
 	}
 
 	public static void cadPtVenda() {

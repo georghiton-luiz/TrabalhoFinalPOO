@@ -17,10 +17,8 @@ public class MenuPontoDeVenda {
                     [3] Editar ponto de venda
                     [0] Sair"""));
             switch (op) {
-                case 1:
-                    Cadastro.cadPtVenda();
-                    break;
-                case 2:
+                case 1 -> Cadastro.cadPtVenda();
+                case 2 -> MenuListaPontoDeVenda.menuListaPontoDeVenda();
             }
         } while (op != 0);
     }

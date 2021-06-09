@@ -119,6 +119,7 @@ public class Produtos {
 	public String toString() {
 		return "Produtos:" +
 				"\nCódigo = " + codigo +
+				"\nCódigo ponto de venda = " + PontoDeVendaCadastrado.getInstance().getCodigo() +
 				"\nCategoria = " + categoria +
 				"\nTipo = " + tipo +
 				"\nTamanho = " + tamanho +
@@ -127,7 +128,6 @@ public class Produtos {
 				"\nQuantidade = " + quantidade +
 				"\nPreco = " + preco +
 				"\nDescricao = " + descricao +
-				"\nCódigo ponto de venda = " + PontoDeVendaCadastrado.getInstance().getCodigo() +
 				"\n----------------------------------------------";
 	}
 }

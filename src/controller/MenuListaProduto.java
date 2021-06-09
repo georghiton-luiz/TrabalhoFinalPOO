@@ -6,7 +6,7 @@ import javax.swing.*;
 
 public class MenuListaProduto {
 
-    public static void listarProdutoCategoria(){
+    public static void menuListarProduto(){
 
         int op1 = Integer.parseInt(JOptionPane.showInputDialog(null, """
                 Escolha uma opção para listar os produtos
@@ -20,7 +20,7 @@ public class MenuListaProduto {
                 [0] Sair"""));
         switch(op1){
             case 1:
-                PesquisarProduto.pesquisarProdutoPtVenda(Integer.parseInt(JOptionPane.showInputDialog("Digite o código do produto")));
+                PesquisarProduto.pesquisarProdutoCodigo(Integer.parseInt(JOptionPane.showInputDialog("Digite o código do produto")));
                 break;
             case 2:
                 PesquisarProduto.pesquisarProdutoPtVenda(Integer.parseInt(JOptionPane.showInputDialog("Digite o código do ponto de venda")));
@@ -32,7 +32,7 @@ public class MenuListaProduto {
                 PesquisarProduto.pesquisarProdutoTipo(JOptionPane.showInputDialog("Digite o tipo do produto").toUpperCase());
                 break;
             case 5:
-
+                PesquisarProduto.pesquisarProdutoTamanho(JOptionPane.showInputDialog("Digite o tipo do produto").toUpperCase());
                 break;
             case 6:
                 PesquisarProduto.pesquisarProdutoModelo(JOptionPane.showInputDialog("Digite o modelo do produto").toUpperCase());
@@ -46,7 +46,7 @@ public class MenuListaProduto {
                 if (resp == 0) {
                     MenuPrincipal.menuPrincipal();
                 } else {
-                    MenuListaProduto.listarProdutoCategoria();
+                    MenuListaProduto.menuListarProduto();
                 }
                 break;
             default:
