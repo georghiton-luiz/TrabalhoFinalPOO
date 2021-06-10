@@ -21,6 +21,7 @@ public class MenuProduto {
                 case 1 -> Cadastro.cadProduto();
                 case 2 -> MenuListaProduto.menuListarProduto();
                 case 3 -> MenuEditarProduto.menuEditarProduto();
+                case 4 -> MenuDeletarProtudo.menuDeletarProduto();
             }
         } while (op != 0);
     }

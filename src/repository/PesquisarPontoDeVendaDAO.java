@@ -56,7 +56,7 @@ public class PesquisarPontoDeVendaDAO {
                 PontoDeVendaCadastrado.getInstance().setNum(rs.getString("num_ptvenda"));
                 PontoDeVendaCadastrado.getInstance().setBairro(rs.getString("bairro_ptvenda"));
                 PontoDeVendaCadastrado.getInstance().setCidade(rs.getString("cidade_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setCidade(rs.getString("uf_ptvenda"));
+                PontoDeVendaCadastrado.getInstance().setUf(rs.getString("uf_ptvenda"));
                 PontoDeVendaCadastrado.getInstance().setComplemento(rs.getString("compl_ptvenda"));
                 PontoDeVendaCadastrado.getInstance().setCEP(rs.getString("cep_ptvenda"));
                 PontoDeVendaCadastrado.getInstance().setFone(rs.getString("fone_ptvenda"));

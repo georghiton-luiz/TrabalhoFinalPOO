@@ -21,6 +21,7 @@ public class MenuPontoDeVenda {
                 case 1 -> Cadastro.cadPtVenda();
                 case 2 -> MenuListaPontoDeVenda.menuListaPontoDeVenda();
                 case 3 -> MenuEditarPontoDeVenda.menuEditarPontoDeVenda();
+                case 4 -> MenuDeletarPontoDeVenda.menuDeletarPontoDeVenda();
             }
         } while (op != 0);
     }
