@@ -41,7 +41,7 @@ public class MenuListaPontoDeVenda {
                     MenuListaProduto.menuListarProduto();
                 }
             default:
-                resp = JOptionPane.showConfirmDialog(null, "Opção invalida\nDeseja sair do menu listagem de ponto de venda", "ALERT",
+                resp = JOptionPane.showConfirmDialog(null, "Opção inválida\nDeseja sair do menu listagem de ponto de venda", "ALERT",
                         JOptionPane.YES_NO_OPTION);
                 if (resp == 0) {
                     MenuPrincipal.menuPrincipal();

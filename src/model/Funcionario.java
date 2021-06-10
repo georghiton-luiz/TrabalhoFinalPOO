@@ -1,5 +1,7 @@
 package model;
 
+import service.PontoDeVendaCadastrado;
+
 import java.time.LocalDate;
 
 public class Funcionario extends Endereco{
@@ -114,5 +116,31 @@ public class Funcionario extends Endereco{
 
 	public void setSenha(String senha) {
 		this.senha = senha;
+	}
+
+	@Override
+	public String toString() {
+		return "Funcionario:" +
+				"\nCódigo: " + codigo +
+				"\nNome: " + nome +
+				"\nData Nascimento: " + dataNascimento +
+				"\nCPF: " + CPF +
+				"\nFone: " + fone +
+				"\nCelular: " + celular +
+				"\nE-mail: " + email +
+				"\nRede Social: " + redeSocial;
+	}
+
+	public String toStringPtVenda() {
+		return "Funcionario:" +
+				"\nCódigo: " + codigo +
+				"\nCódigo do ponto de venda: " + PontoDeVendaCadastrado.getInstance().getCodigo() +
+				"\nNome: " + nome +
+				"\nData Nascimento: " + dataNascimento +
+				"\nCPF: " + CPF +
+				"\nFone: " + fone +
+				"\nCelular: " + celular +
+				"\nE-mail: " + email +
+				"\nRede Social: " + redeSocial;
 	}
 }

@@ -20,6 +20,10 @@ public class MenuFuncionario {
                     Cadastro.cadFuncionario();
                     break;
                 case 2:
+                    MenuListarFuncionairo.menuListarFuncionario();
+                    break;
+                case 3:
+
             }
         } while (op != 0);
     }

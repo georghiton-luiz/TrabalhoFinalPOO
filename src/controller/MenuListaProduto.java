@@ -50,6 +50,13 @@ public class MenuListaProduto {
                 }
                 break;
             default:
+                resp = JOptionPane.showConfirmDialog(null, "Opção inválida\nDeseja sair do menu listagem de produto", "ALERT",
+                        JOptionPane.YES_NO_OPTION);
+                if (resp == 0) {
+                    MenuPrincipal.menuPrincipal();
+                } else {
+                    MenuListaProduto.menuListarProduto();
+                }
         }
     }
 

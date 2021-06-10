@@ -1,8 +1,6 @@
 package application;
 
-import controller.MenuListaProduto;
 import controller.MenuPrincipal;
-import service.Cadastro;
 
 public class Programa {
 
