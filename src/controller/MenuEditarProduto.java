@@ -1,6 +1,8 @@
 package controller;
 
-import repository.PesquisarProduto;
+import repository.EditarProdutoDAO;
+import repository.PesquisarPontoDeVendaDAO;
+import repository.PesquisarProdutoDAO;
 
 import javax.swing.*;
 
@@ -8,8 +10,9 @@ public class MenuEditarProduto {
 
     public static void menuEditarProduto(){
 
+
         int op1 = Integer.parseInt(JOptionPane.showInputDialog(null, """
-                Escolha o intem a ser editado de um produtos
+                Escolha o item a ser editado de um produtos
                 [1] Categoria
                 [2] Tipo
                 [3] Tamanho
@@ -17,24 +20,28 @@ public class MenuEditarProduto {
                 [5] Cor
                 [6] Preço
                 [0] Sair"""));
+
+        Integer codPtVenda = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite o código do ponto de venda onde esta o produto que deseja alterar"));
+        Integer cod = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite o código do produto que deseja alterar"));
+
         switch(op1){
             case 1:
-                PesquisarProduto.pesquisarProdutoCodigo(Integer.parseInt(JOptionPane.showInputDialog("Digite o código do produto")));
+                EditarProdutoDAO.editarProdutoCategoria(JOptionPane.showInputDialog("Digite a categoria correta desse produto").toUpperCase(), cod, codPtVenda);
                 break;
             case 2:
-                PesquisarProduto.pesquisarProdutoPtVenda(Integer.parseInt(JOptionPane.showInputDialog("Digite o código do ponto de venda")));
+                EditarProdutoDAO.editarProdutoTipo(JOptionPane.showInputDialog("Digite o tipo correto desse produto").toUpperCase(), cod, codPtVenda);
                 break;
             case 3:
-                PesquisarProduto.pesquisarProdutoCategoria(JOptionPane.showInputDialog("Digite a categoria do produto").toUpperCase());
+                EditarProdutoDAO.editarProdutoTamanho(JOptionPane.showInputDialog("Digite o tamanho correto desse produto").toUpperCase(), cod, codPtVenda);
                 break;
             case 4:
-                PesquisarProduto.pesquisarProdutoTipo(JOptionPane.showInputDialog("Digite o tipo do produto").toUpperCase());
+                EditarProdutoDAO.editarProdutoModelo(JOptionPane.showInputDialog("Digite o modelo correto desse produto").toUpperCase(), cod, codPtVenda);
                 break;
             case 5:
-                PesquisarProduto.pesquisarProdutoTamanho(JOptionPane.showInputDialog("Digite o tipo do produto").toUpperCase());
+                EditarProdutoDAO.editarProdutoCor(JOptionPane.showInputDialog("Digite a cor correta desse produto").toUpperCase(), cod, codPtVenda);
                 break;
             case 6:
-
+                EditarProdutoDAO.editarProdutoPreco(Double.parseDouble(JOptionPane.showInputDialog("Digite a cor correta desse produto")), cod, codPtVenda);
                 break;
             case 0:
                 int resp = JOptionPane.showConfirmDialog(null, "Deseja sair da edição de produtos", "ALERT",

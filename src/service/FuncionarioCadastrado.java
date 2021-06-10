@@ -3,10 +3,14 @@ package service;
 
 import model.Funcionario;
 
+import java.sql.Date;
 import java.time.LocalDate;
 import java.util.Objects;
 
 public class FuncionarioCadastrado extends Funcionario {
+
+    private static Date dataNasc;
+    private static String dataConvertida;
 
     public static FuncionarioCadastrado funcionarioCadastradoService;
 
@@ -52,6 +56,22 @@ public class FuncionarioCadastrado extends Funcionario {
 
     public void setFone(String fone) {
         super.setFone(fone);
+    }
+
+    public static Date getDataNasc() {
+        return dataNasc;
+    }
+
+    public static void setDataNasc(Date dataNasc) {
+        FuncionarioCadastrado.dataNasc = dataNasc;
+    }
+
+    public static String getDataConvertida() {
+        return dataConvertida;
+    }
+
+    public static void setDataConvertida(String dataConvertida) {
+        FuncionarioCadastrado.dataConvertida = dataConvertida;
     }
 
     public String getCelular() {

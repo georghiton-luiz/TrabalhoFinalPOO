@@ -1,6 +1,6 @@
 package controller;
 
-import repository.PesquisarProduto;
+import repository.PesquisarProdutoDAO;
 
 import javax.swing.*;
 
@@ -20,25 +20,25 @@ public class MenuListaProduto {
                 [0] Sair"""));
         switch(op1){
             case 1:
-                PesquisarProduto.pesquisarProdutoCodigo(Integer.parseInt(JOptionPane.showInputDialog("Digite o código do produto")));
+                PesquisarProdutoDAO.pesquisarProdutoCodigo(Integer.parseInt(JOptionPane.showInputDialog("Digite o código do produto")));
                 break;
             case 2:
-                PesquisarProduto.pesquisarProdutoPtVenda(Integer.parseInt(JOptionPane.showInputDialog("Digite o código do ponto de venda")));
+                PesquisarProdutoDAO.pesquisarProdutoPtVenda(Integer.parseInt(JOptionPane.showInputDialog("Digite o código do ponto de venda")));
                 break;
             case 3:
-                PesquisarProduto.pesquisarProdutoCategoria(JOptionPane.showInputDialog("Digite a categoria do produto").toUpperCase());
+                PesquisarProdutoDAO.pesquisarProdutoCategoria(JOptionPane.showInputDialog("Digite a categoria do produto").toUpperCase());
                 break;
             case 4:
-                PesquisarProduto.pesquisarProdutoTipo(JOptionPane.showInputDialog("Digite o tipo do produto").toUpperCase());
+                PesquisarProdutoDAO.pesquisarProdutoTipo(JOptionPane.showInputDialog("Digite o tipo do produto").toUpperCase());
                 break;
             case 5:
-                PesquisarProduto.pesquisarProdutoTamanho(JOptionPane.showInputDialog("Digite o tipo do produto").toUpperCase());
+                PesquisarProdutoDAO.pesquisarProdutoTamanho(JOptionPane.showInputDialog("Digite o tipo do produto").toUpperCase());
                 break;
             case 6:
-                PesquisarProduto.pesquisarProdutoModelo(JOptionPane.showInputDialog("Digite o modelo do produto").toUpperCase());
+                PesquisarProdutoDAO.pesquisarProdutoModelo(JOptionPane.showInputDialog("Digite o modelo do produto").toUpperCase());
                 break;
             case 7:
-                PesquisarProduto.pesquisarProdutoCor(JOptionPane.showInputDialog("Digite a cor do produto").toUpperCase());
+                PesquisarProdutoDAO.pesquisarProdutoCor(JOptionPane.showInputDialog("Digite a cor do produto").toUpperCase());
                 break;
             case 0:
                 int resp = JOptionPane.showConfirmDialog(null, "Deseja sair da pesquisa de produtos", "ALERT",

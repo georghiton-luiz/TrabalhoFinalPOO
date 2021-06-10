@@ -1,6 +1,5 @@
 package controller;
 
-import repository.PesquisarProduto;
 import service.Cadastro;
 
 import javax.swing.*;
@@ -16,16 +15,12 @@ public class MenuProduto {
                     [1] Cadastrar Produto
                     [2] Listar Produto
                     [3] Editar Produto
+                    [4] Deletar Produto
                     [0] Sair"""));
             switch (op) {
-                case 1:
-                    Cadastro.cadProduto();
-                    break;
-                case 2:
-                    MenuListaProduto.menuListarProduto();
-                    break;
-                case 3:
-
+                case 1 -> Cadastro.cadProduto();
+                case 2 -> MenuListaProduto.menuListarProduto();
+                case 3 -> MenuEditarProduto.menuEditarProduto();
             }
         } while (op != 0);
     }

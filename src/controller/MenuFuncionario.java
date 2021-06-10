@@ -14,16 +14,12 @@ public class MenuFuncionario {
                     [1] Cadastrar Funcionario
                     [2] Listar Funcionario
                     [3] Editar Funcionario
+                    [4] Deletar Funcionario
                     [0] Sair"""));
             switch (op) {
-                case 1:
-                    Cadastro.cadFuncionario();
-                    break;
-                case 2:
-                    MenuListarFuncionairo.menuListarFuncionario();
-                    break;
-                case 3:
-
+                case 1 -> Cadastro.cadFuncionario();
+                case 2 -> MenuListarFuncionairo.menuListarFuncionario();
+                case 3 -> MenuFuncionario.menuFuncionario();
             }
         } while (op != 0);
     }

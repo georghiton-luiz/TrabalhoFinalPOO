@@ -1,5 +1,7 @@
 package model;
 
+import java.sql.Date;
+
 public abstract class Endereco {
 
     private String logradouro;

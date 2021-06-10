@@ -1,5 +1,7 @@
 package model;
 
+import service.FormatarDados;
+import service.FuncionarioCadastrado;
 import service.PontoDeVendaCadastrado;
 
 import java.time.LocalDate;
@@ -123,12 +125,20 @@ public class Funcionario extends Endereco{
 		return "Funcionario:" +
 				"\nCódigo: " + codigo +
 				"\nNome: " + nome +
-				"\nData Nascimento: " + dataNascimento +
+				"\nData Nascimento: " + FormatarDados.dataFormatada(FuncionarioCadastrado.getDataNasc()) +
 				"\nCPF: " + CPF +
+				"\nLogradouro: " + super.getLogradouro() +
+				"\nNúmero: " + super.getNum() +
+				"\nBairro: " + super.getBairro() +
+				"\nCidade: " + super.getCidade() +
+				"\nEstado: " + super.getUf() +
+				"\nComplemento: " + super.getComplemento() +
+				"\nCEP: " + super.getCEP() +
 				"\nFone: " + fone +
 				"\nCelular: " + celular +
 				"\nE-mail: " + email +
-				"\nRede Social: " + redeSocial;
+				"\nRede Social: " + redeSocial +
+				"\n-----------------------------------";
 	}
 
 	public String toStringPtVenda() {
@@ -138,9 +148,17 @@ public class Funcionario extends Endereco{
 				"\nNome: " + nome +
 				"\nData Nascimento: " + dataNascimento +
 				"\nCPF: " + CPF +
+				"\nLogradouro: " + super.getLogradouro() +
+				"\nNúmero: " + super.getNum() +
+				"\nBairro: " + super.getBairro() +
+				"\nCidade: " + super.getCidade() +
+				"\nEstado: " + super.getUf() +
+				"\nComplemento: " + super.getComplemento() +
+				"\nCEP: " + super.getCEP() +
 				"\nFone: " + fone +
 				"\nCelular: " + celular +
 				"\nE-mail: " + email +
-				"\nRede Social: " + redeSocial;
+				"\nRede Social: " + redeSocial +
+				"\n-----------------------------------";
 	}
 }

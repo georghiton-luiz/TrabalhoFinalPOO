@@ -1,12 +1,11 @@
 package repository;
 
 import service.FuncionarioCadastrado;
-import service.PontoDeVendaCadastrado;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class PesquisarFuncionario {
+public class PesquisarFuncionarioDAO {
 
     public static boolean pesquisarFuncionario(Integer cod){
 
@@ -53,6 +52,7 @@ public class PesquisarFuncionario {
                 FuncionarioCadastrado.getInstance().setCodigo(rs.getInt("cod_fun"));
                 FuncionarioCadastrado.getInstance().setNome(rs.getString("nome_fun"));
                 FuncionarioCadastrado.getInstance().setCPF(rs.getString("cpf_fun"));
+                FuncionarioCadastrado.setDataNasc(rs.getDate("data_nasc_fun"));
                 FuncionarioCadastrado.getInstance().setLogradouro(rs.getString("logradouro_fun"));
                 FuncionarioCadastrado.getInstance().setNum(rs.getString("num_fun"));
                 FuncionarioCadastrado.getInstance().setBairro(rs.getString("bairro_fun"));
@@ -86,6 +86,7 @@ public class PesquisarFuncionario {
                 FuncionarioCadastrado.getInstance().setCodigo(rs.getInt("cod_fun"));
                 FuncionarioCadastrado.getInstance().setNome(rs.getString("nome_fun"));
                 FuncionarioCadastrado.getInstance().setCPF(rs.getString("cpf_fun"));
+                FuncionarioCadastrado.setDataNasc(rs.getDate("data_nasc_fun"));
                 FuncionarioCadastrado.getInstance().setLogradouro(rs.getString("logradouro_fun"));
                 FuncionarioCadastrado.getInstance().setNum(rs.getString("num_fun"));
                 FuncionarioCadastrado.getInstance().setBairro(rs.getString("bairro_fun"));
@@ -119,6 +120,7 @@ public class PesquisarFuncionario {
                 FuncionarioCadastrado.getInstance().setCodigo(rs.getInt("cod_fun"));
                 FuncionarioCadastrado.getInstance().setNome(rs.getString("nome_fun"));
                 FuncionarioCadastrado.getInstance().setCPF(rs.getString("cpf_fun"));
+                FuncionarioCadastrado.setDataNasc(rs.getDate("data_nasc_fun"));
                 FuncionarioCadastrado.getInstance().setLogradouro(rs.getString("logradouro_fun"));
                 FuncionarioCadastrado.getInstance().setNum(rs.getString("num_fun"));
                 FuncionarioCadastrado.getInstance().setBairro(rs.getString("bairro_fun"));
@@ -165,7 +167,7 @@ public class PesquisarFuncionario {
                 FuncionarioCadastrado.getInstance().setRedeSocial(rs.getString("redesociais_fun"));
                 FuncionarioCadastrado.getInstance().setUserName(rs.getString("username_fun"));
                 FuncionarioCadastrado.getInstance().setSenha(rs.getString("senha_fun"));
-                PesquisarPontoDeVenda.pesquisarPontoDeVendaCodigo(rs.getInt("cod_ptvenda"));
+                PesquisarPontoDeVendaDAO.pesquisarPontoDeVendaCodigo(rs.getInt("cod_ptvenda"));
 
                 System.out.println(FuncionarioCadastrado.getInstance().toStringPtVenda());
             }

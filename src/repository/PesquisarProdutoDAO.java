@@ -4,13 +4,12 @@ import controller.MenuListaProduto;
 import service.PontoDeVendaCadastrado;
 import service.ProtudoCadastrado;
 
-import javax.swing.*;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PesquisarProduto {
+public class PesquisarProdutoDAO {
 
     public static boolean pesquisarProduto(Integer pesquisar){
 
@@ -31,7 +30,7 @@ public class PesquisarProduto {
                 ProtudoCadastrado.getInstance().setDescricao(rs.getString("descricao_produto"));
                 ProtudoCadastrado.getInstance().setQuantidade(rs.getInt("qtd_produto"));
                 ProtudoCadastrado.getInstance().setPreco(rs.getDouble("preco_produto"));
-                PesquisarPontoDeVenda.pesquisarPontoDeVenda(rs.getInt("cod_ptvenda"));
+                PesquisarPontoDeVendaDAO.pesquisarPontoDeVenda(rs.getInt("cod_ptvenda"));
 
                 System.out.println(ProtudoCadastrado.getInstance());
             }
@@ -61,7 +60,7 @@ public class PesquisarProduto {
                 ProtudoCadastrado.getInstance().setDescricao(rs.getString("descricao_produto"));
                 ProtudoCadastrado.getInstance().setQuantidade(rs.getInt("qtd_produto"));
                 ProtudoCadastrado.getInstance().setPreco(rs.getDouble("preco_produto"));
-                PesquisarPontoDeVenda.pesquisarPontoDeVenda(rs.getInt("cod_ptvenda"));
+                PesquisarPontoDeVendaDAO.pesquisarPontoDeVenda(rs.getInt("cod_ptvenda"));
 
                 System.out.println(ProtudoCadastrado.getInstance());
             }
@@ -91,7 +90,7 @@ public class PesquisarProduto {
                 ProtudoCadastrado.getInstance().setDescricao(rs.getString("descricao_produto"));
                 ProtudoCadastrado.getInstance().setQuantidade(rs.getInt("qtd_produto"));
                 ProtudoCadastrado.getInstance().setPreco(rs.getDouble("preco_produto"));
-                PesquisarPontoDeVenda.pesquisarPontoDeVenda(rs.getInt("cod_ptvenda"));
+                PesquisarPontoDeVendaDAO.pesquisarPontoDeVenda(rs.getInt("cod_ptvenda"));
 
                 System.out.println(ProtudoCadastrado.getInstance());
             }
@@ -121,7 +120,7 @@ public class PesquisarProduto {
                 ProtudoCadastrado.getInstance().setDescricao(rs.getString("descricao_produto"));
                 ProtudoCadastrado.getInstance().setQuantidade(rs.getInt("qtd_produto"));
                 ProtudoCadastrado.getInstance().setPreco(rs.getDouble("preco_produto"));
-                PesquisarPontoDeVenda.pesquisarPontoDeVenda(rs.getInt("cod_ptvenda"));
+                PesquisarPontoDeVendaDAO.pesquisarPontoDeVenda(rs.getInt("cod_ptvenda"));
 
                 System.out.println(ProtudoCadastrado.getInstance());
             }
@@ -150,7 +149,7 @@ public class PesquisarProduto {
                 ProtudoCadastrado.getInstance().setDescricao(rs.getString("descricao_produto"));
                 ProtudoCadastrado.getInstance().setQuantidade(rs.getInt("qtd_produto"));
                 ProtudoCadastrado.getInstance().setPreco(rs.getDouble("preco_produto"));
-                PesquisarPontoDeVenda.pesquisarPontoDeVenda(rs.getInt("cod_ptvenda"));
+                PesquisarPontoDeVendaDAO.pesquisarPontoDeVenda(rs.getInt("cod_ptvenda"));
 
                 System.out.println(ProtudoCadastrado.getInstance());
             }
@@ -179,7 +178,7 @@ public class PesquisarProduto {
                 ProtudoCadastrado.getInstance().setDescricao(rs.getString("descricao_produto"));
                 ProtudoCadastrado.getInstance().setQuantidade(rs.getInt("qtd_produto"));
                 ProtudoCadastrado.getInstance().setPreco(rs.getDouble("preco_produto"));
-                PesquisarPontoDeVenda.pesquisarPontoDeVenda(rs.getInt("cod_ptvenda"));
+                PesquisarPontoDeVendaDAO.pesquisarPontoDeVenda(rs.getInt("cod_ptvenda"));
 
                 System.out.println(ProtudoCadastrado.getInstance());
             }
@@ -208,7 +207,7 @@ public class PesquisarProduto {
                 ProtudoCadastrado.getInstance().setDescricao(rs.getString("descricao_produto"));
                 ProtudoCadastrado.getInstance().setQuantidade(rs.getInt("qtd_produto"));
                 ProtudoCadastrado.getInstance().setPreco(rs.getDouble("preco_produto"));
-                PesquisarPontoDeVenda.pesquisarPontoDeVenda(rs.getInt("cod_ptvenda"));
+                PesquisarPontoDeVendaDAO.pesquisarPontoDeVenda(rs.getInt("cod_ptvenda"));
 
                 System.out.println(ProtudoCadastrado.getInstance());
             }
@@ -236,7 +235,7 @@ public class PesquisarProduto {
                 ProtudoCadastrado.getInstance().setDescricao(rs.getString("descricao_produto"));
                 ProtudoCadastrado.getInstance().setQuantidade(rs.getInt("qtd_produto"));
                 ProtudoCadastrado.getInstance().setPreco(rs.getDouble("preco_produto"));
-                PesquisarPontoDeVenda.pesquisarPontoDeVenda(rs.getInt("cod_ptvenda"));
+                PesquisarPontoDeVendaDAO.pesquisarPontoDeVenda(rs.getInt("cod_ptvenda"));
 
                 System.out.println(ProtudoCadastrado.getInstance());
             }

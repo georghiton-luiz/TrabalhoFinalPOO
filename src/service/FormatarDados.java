@@ -6,6 +6,7 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 public class FormatarDados {
@@ -104,5 +105,16 @@ public class FormatarDados {
             e.printStackTrace();
         }
         return data;
+    }
+
+    public static String dataFormatada(java.sql.Date data){
+
+        DateFormat formatUS = new SimpleDateFormat("yyyy-MM-dd");
+        FuncionarioCadastrado.setDataConvertida(formatUS.format(data));
+        LocalDate ldData = LocalDate.parse(FuncionarioCadastrado.getDataConvertida());
+        DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        FuncionarioCadastrado.setDataConvertida(fmt.format(ldData));
+
+        return FuncionarioCadastrado.getDataConvertida();
     }
 }

@@ -1,7 +1,7 @@
 package controller;
 
-import repository.PesquisarFuncionario;
-import repository.PesquisarProduto;
+import repository.PesquisarFuncionarioDAO;
+import repository.PesquisarPontoDeVendaDAO;
 
 import javax.swing.*;
 
@@ -18,16 +18,16 @@ public class MenuListarFuncionairo {
                 [0] Sair"""));
         switch(op1){
             case 1:
-                PesquisarFuncionario.pesquisarFuncionarioCod(Integer.parseInt(JOptionPane.showInputDialog("Digite o código do produto")));
+                PesquisarFuncionarioDAO.pesquisarFuncionarioCod(Integer.parseInt(JOptionPane.showInputDialog("Digite o código do produto")));
                 break;
             case 2:
-                PesquisarFuncionario.pesquisarFuncionarioPtVenda(Integer.parseInt(JOptionPane.showInputDialog("Digite o código do ponto de venda")));
+                PesquisarFuncionarioDAO.pesquisarFuncionarioPtVenda(Integer.parseInt(JOptionPane.showInputDialog("Digite o código do ponto de venda")));
                 break;
             case 3:
-                PesquisarFuncionario.pesquisarFuncionarioBairro(JOptionPane.showInputDialog("Digite o bairro do funcionario").toUpperCase());
+                PesquisarFuncionarioDAO.pesquisarFuncionarioBairro(JOptionPane.showInputDialog("Digite o bairro do funcionario").toUpperCase());
                 break;
             case 4:
-                PesquisarFuncionario.pesquisarFuncionarioCidade(JOptionPane.showInputDialog("Digite a cidade").toUpperCase());
+                PesquisarFuncionarioDAO.pesquisarFuncionarioCidade(JOptionPane.showInputDialog("Digite a cidade").toUpperCase());
                 break;
             case 0:
                 int resp = JOptionPane.showConfirmDialog(null, "Deseja sair da pesquisa de funcionario", "ALERT",

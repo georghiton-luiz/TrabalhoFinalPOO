@@ -1,6 +1,6 @@
 package controller;
 
-import repository.PesquisarPontoDeVenda;
+import repository.PesquisarPontoDeVendaDAO;
 
 import javax.swing.*;
 
@@ -18,16 +18,16 @@ public class MenuListaPontoDeVenda {
                 [0] Sair"""));
         switch (op1) {
             case 1:
-                PesquisarPontoDeVenda.pesquisarPontoDeVendaCodigo(Integer.parseInt(JOptionPane.showInputDialog(null, "Digite o código do ponto de venda")));
+                PesquisarPontoDeVendaDAO.pesquisarPontoDeVendaCodigo(Integer.parseInt(JOptionPane.showInputDialog(null, "Digite o código do ponto de venda")));
                 break;
             case 2:
-                PesquisarPontoDeVenda.pesquisarPontoDeVendaFuncionario(Integer.parseInt(JOptionPane.showInputDialog(null, "Digite o código do funcionario")));
+                PesquisarPontoDeVendaDAO.pesquisarPontoDeVendaFuncionario(Integer.parseInt(JOptionPane.showInputDialog(null, "Digite o código do funcionario")));
                 break;
             case 3:
-                PesquisarPontoDeVenda.pesquisarPontoDeVendaBairro(JOptionPane.showInputDialog("Digita o bairro do ponto de venda"));
+                PesquisarPontoDeVendaDAO.pesquisarPontoDeVendaBairro(JOptionPane.showInputDialog("Digita o bairro do ponto de venda"));
                 break;
             case 4:
-                PesquisarPontoDeVenda.pesquisarPontoDeVendaCidade(JOptionPane.showInputDialog("Digita a cidade do ponto de venda"));
+                PesquisarPontoDeVendaDAO.pesquisarPontoDeVendaCidade(JOptionPane.showInputDialog("Digita a cidade do ponto de venda"));
                 break;
             case 5:
                 MenuListaProduto.menuListarProduto();

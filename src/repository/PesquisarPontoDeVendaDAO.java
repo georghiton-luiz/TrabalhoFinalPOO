@@ -5,9 +5,9 @@ import service.PontoDeVendaCadastrado;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class PesquisarPontoDeVenda {
+public class PesquisarPontoDeVendaDAO {
 
-    public PesquisarPontoDeVenda(){
+    public PesquisarPontoDeVendaDAO(){
 
     }
 
@@ -31,7 +31,7 @@ public class PesquisarPontoDeVenda {
                 PontoDeVendaCadastrado.getInstance().setFone(rs.getString("fone_ptvenda"));
                 PontoDeVendaCadastrado.getInstance().setCelular(rs.getString("celular_ptvenda"));
                 PontoDeVendaCadastrado.getInstance().setEmail(rs.getString("email_ptvenda"));
-                PesquisarFuncionario.pesquisarFuncionario(rs.getInt("cod_fun"));
+                PesquisarFuncionarioDAO.pesquisarFuncionario(rs.getInt("cod_fun"));
 
                 System.out.println(PontoDeVendaCadastrado.getInstance());
             }
@@ -62,7 +62,7 @@ public class PesquisarPontoDeVenda {
                 PontoDeVendaCadastrado.getInstance().setFone(rs.getString("fone_ptvenda"));
                 PontoDeVendaCadastrado.getInstance().setCelular(rs.getString("celular_ptvenda"));
                 PontoDeVendaCadastrado.getInstance().setEmail(rs.getString("email_ptvenda"));
-                PesquisarFuncionario.pesquisarFuncionario(rs.getInt("cod_fun"));
+                PesquisarFuncionarioDAO.pesquisarFuncionario(rs.getInt("cod_fun"));
 
                 System.out.println(PontoDeVendaCadastrado.getInstance());
             }
@@ -91,7 +91,7 @@ public class PesquisarPontoDeVenda {
                 PontoDeVendaCadastrado.getInstance().setFone(rs.getString("fone_ptvenda"));
                 PontoDeVendaCadastrado.getInstance().setCelular(rs.getString("celular_ptvenda"));
                 PontoDeVendaCadastrado.getInstance().setEmail(rs.getString("email_ptvenda"));
-                PesquisarFuncionario.pesquisarFuncionario(rs.getInt("cod_fun"));
+                PesquisarFuncionarioDAO.pesquisarFuncionario(rs.getInt("cod_fun"));
 
                 System.out.println(PontoDeVendaCadastrado.getInstance());
             }
@@ -120,7 +120,7 @@ public class PesquisarPontoDeVenda {
                 PontoDeVendaCadastrado.getInstance().setFone(rs.getString("fone_ptvenda"));
                 PontoDeVendaCadastrado.getInstance().setCelular(rs.getString("celular_ptvenda"));
                 PontoDeVendaCadastrado.getInstance().setEmail(rs.getString("email_ptvenda"));
-                PesquisarFuncionario.pesquisarFuncionario(rs.getInt("cod_fun"));
+                PesquisarFuncionarioDAO.pesquisarFuncionario(rs.getInt("cod_fun"));
 
                 System.out.println(PontoDeVendaCadastrado.getInstance());
             }
@@ -149,7 +149,7 @@ public class PesquisarPontoDeVenda {
                 PontoDeVendaCadastrado.getInstance().setFone(rs.getString("fone_ptvenda"));
                 PontoDeVendaCadastrado.getInstance().setCelular(rs.getString("celular_ptvenda"));
                 PontoDeVendaCadastrado.getInstance().setEmail(rs.getString("email_ptvenda"));
-                PesquisarFuncionario.pesquisarFuncionario(rs.getInt("cod_fun"));
+                PesquisarFuncionarioDAO.pesquisarFuncionario(rs.getInt("cod_fun"));
 
                 System.out.println(PontoDeVendaCadastrado.getInstance().toStringFuncionario());
             }
@@ -178,7 +178,7 @@ public class PesquisarPontoDeVenda {
                 PontoDeVendaCadastrado.getInstance().setFone(rs.getString("fone_ptvenda"));
                 PontoDeVendaCadastrado.getInstance().setCelular(rs.getString("celular_ptvenda"));
                 PontoDeVendaCadastrado.getInstance().setEmail(rs.getString("email_ptvenda"));
-                PesquisarProduto.pesquisarProdutoCodigo(rs.getInt("cod_produto"));
+                PesquisarProdutoDAO.pesquisarProdutoCodigo(rs.getInt("cod_produto"));
 
                 System.out.println(PontoDeVendaCadastrado.getInstance().toStringProduto());
             }

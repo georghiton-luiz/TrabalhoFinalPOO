@@ -33,7 +33,7 @@ public class Cadastro {
 
 		PontoDeVendaCadastrado ptVenda = PontoDeVendaCadastrado.getInstance();
 		Integer codPtVenda = Integer.parseInt(JOptionPane.showInputDialog("Código o Ponto de venda cadastrado"));
-		if(PesquisarPontoDeVenda.pesquisarPontoDeVenda(codPtVenda)){
+		if(PesquisarPontoDeVendaDAO.pesquisarPontoDeVenda(codPtVenda)){
 			produto = new Produtos(cod, categoria, tipo, tamanho, modelo, cor, qtd, descricao, preco, ptVenda);
 		}else{
 			JOptionPane.showMessageDialog(null, "Ponto de venda não encontrado \nCadastre um ponto de venda");
@@ -45,12 +45,12 @@ public class Cadastro {
 	public static void cadPtVenda() {
 
 		Integer cod = Integer.parseInt(JOptionPane.showInputDialog("Código do ponto de venda"));
-		String logradouro = JOptionPane.showInputDialog("Logradouro");
-		String num = JOptionPane.showInputDialog("Número");
-		String bairro = JOptionPane.showInputDialog("Bairro");
-		String cidade = JOptionPane.showInputDialog("Cidade");
-		String uf = JOptionPane.showInputDialog("UF");
-		String complemento = JOptionPane.showInputDialog("Complemento");
+		String logradouro = JOptionPane.showInputDialog("Logradouro").toUpperCase();
+		String num = JOptionPane.showInputDialog("Número").toUpperCase();
+		String bairro = JOptionPane.showInputDialog("Bairro").toUpperCase();
+		String cidade = JOptionPane.showInputDialog("Cidade").toUpperCase();
+		String uf = JOptionPane.showInputDialog("UF").toUpperCase();
+		String complemento = JOptionPane.showInputDialog("Complemento").toUpperCase();
 		String cep = FormatarDados.getCepFormatado(JOptionPane.showInputDialog("CEP"));
 		String fone = FormatarDados.getFoneFormatado(JOptionPane.showInputDialog("Fone"));
 		String celular = FormatarDados.getCelFormatado(JOptionPane.showInputDialog("Celular"));
@@ -61,7 +61,7 @@ public class Cadastro {
 		}
 		FuncionarioCadastrado funcionario = FuncionarioCadastrado.getInstance();
 		Integer codFun = Integer.parseInt(JOptionPane.showInputDialog("Código de funcionario cadastrado"));
-		if(PesquisarFuncionario.pesquisarFuncionario(codFun)){
+		if(PesquisarFuncionarioDAO.pesquisarFuncionario(codFun)){
 			pdVenda = new PontoDeVenda(cod, logradouro, num, bairro, cidade, uf, complemento, cep, fone, celular, email, funcionario);
 		}else{
 			JOptionPane.showMessageDialog(null, "funcionario não encontrado Cadastre um funcionario");
@@ -72,7 +72,7 @@ public class Cadastro {
 
 	public static void cadFuncionario() {
 		Integer codigo = Integer.parseInt(JOptionPane.showInputDialog("Código do funcionario"));
-		String nome = JOptionPane.showInputDialog("Nome");
+		String nome = JOptionPane.showInputDialog("Nome").toUpperCase();
 		LocalDate data = FormatarDados.formatarData(JOptionPane.showInputDialog("Data de Nascimento"));
 		String cpf = JOptionPane.showInputDialog("CPF");
 		boolean auxCpf = ValidarDados.isCPF(cpf);
@@ -80,12 +80,12 @@ public class Cadastro {
 			auxCpf = ValidarDados.isCPF(cpf = JOptionPane.showInputDialog("CPF invalido ou já cadastrado\nDigite CPF"));
 		}
 		cpf = FormatarDados.getCpfFormatado(cpf);
-		String logradouro = JOptionPane.showInputDialog("Logradouro");
-		String num = JOptionPane.showInputDialog("Número");
-		String bairro = JOptionPane.showInputDialog("Bairro");
-		String cidade = JOptionPane.showInputDialog("Cidade");
-		String uf = JOptionPane.showInputDialog("UF");
-		String complemento = JOptionPane.showInputDialog("Complemento");
+		String logradouro = JOptionPane.showInputDialog("Logradouro").toUpperCase();
+		String num = JOptionPane.showInputDialog("Número").toUpperCase();
+		String bairro = JOptionPane.showInputDialog("Bairro").toUpperCase();
+		String cidade = JOptionPane.showInputDialog("Cidade").toUpperCase();
+		String uf = JOptionPane.showInputDialog("UF").toUpperCase();
+		String complemento = JOptionPane.showInputDialog("Complemento").toUpperCase();
 		String CEP = FormatarDados.getCepFormatado(JOptionPane.showInputDialog("CEP"));
 		String fone = FormatarDados.getFoneFormatado(JOptionPane.showInputDialog("Fone"));
 		String celular = FormatarDados.getCelFormatado(JOptionPane.showInputDialog("Celular"));
