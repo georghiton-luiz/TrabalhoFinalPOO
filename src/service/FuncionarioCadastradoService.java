@@ -7,14 +7,14 @@ import java.sql.Date;
 import java.time.LocalDate;
 import java.util.Objects;
 
-public class FuncionarioCadastrado extends Funcionario {
+public class FuncionarioCadastradoService extends Funcionario {
 
     private static Date dataNasc;
     private static String dataConvertida;
 
-    public static FuncionarioCadastrado funcionarioCadastradoService;
+    public static FuncionarioCadastradoService funcionarioCadastradoService;
 
-    private FuncionarioCadastrado(){
+    private FuncionarioCadastradoService(){
 
     }
 
@@ -63,7 +63,7 @@ public class FuncionarioCadastrado extends Funcionario {
     }
 
     public static void setDataNasc(Date dataNasc) {
-        FuncionarioCadastrado.dataNasc = dataNasc;
+        FuncionarioCadastradoService.dataNasc = dataNasc;
     }
 
     public static String getDataConvertida() {
@@ -71,7 +71,7 @@ public class FuncionarioCadastrado extends Funcionario {
     }
 
     public static void setDataConvertida(String dataConvertida) {
-        FuncionarioCadastrado.dataConvertida = dataConvertida;
+        FuncionarioCadastradoService.dataConvertida = dataConvertida;
     }
 
     public String getCelular() {
@@ -114,11 +114,11 @@ public class FuncionarioCadastrado extends Funcionario {
         super.setSenha(senha);
     }
 
-    public static FuncionarioCadastrado getInstance() {
+    public static FuncionarioCadastradoService getInstance() {
         if (Objects.nonNull(funcionarioCadastradoService)) {
             return funcionarioCadastradoService;
         }
-        funcionarioCadastradoService = new FuncionarioCadastrado();
+        funcionarioCadastradoService = new FuncionarioCadastradoService();
         return funcionarioCadastradoService;
     }
 }

@@ -1,7 +1,6 @@
 package model;
 
-import service.PontoDeVendaCadastrado;
-import service.ProtudoCadastrado;
+import service.PontoDeVendaCadastradoService;
 
 public class Produtos {
 
@@ -119,7 +118,7 @@ public class Produtos {
 	public String toString() {
 		return "Produtos:" +
 				"\nCódigo = " + codigo +
-				"\nCódigo ponto de venda = " + PontoDeVendaCadastrado.getInstance().getCodigo() +
+				"\nCódigo ponto de venda = " + PontoDeVendaCadastradoService.getInstance().getCodigo() +
 				"\nCategoria = " + categoria +
 				"\nTipo = " + tipo +
 				"\nTamanho = " + tamanho +

@@ -1,6 +1,6 @@
 package controller;
 
-import service.Cadastro;
+import service.CadastroService;
 
 import javax.swing.*;
 
@@ -17,7 +17,7 @@ public class MenuFuncionario {
                     [4] Deletar Funcionario
                     [0] Sair"""));
             switch (op) {
-                case 1 -> Cadastro.cadFuncionario();
+                case 1 -> CadastroService.cadFuncionario();
                 case 2 -> MenuListarFuncionairo.menuListarFuncionario();
                 case 3 -> MenuFuncionario.menuFuncionario();
                 case 4 -> MenuDeletarFuncionario.menuDeletarFuncionario();

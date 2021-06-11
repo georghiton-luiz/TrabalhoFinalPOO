@@ -14,7 +14,7 @@ public class MenuPrincipal {
                     [2] Ponto de venda
                     [3] Produto
                     [4] Vender
-                    [5] Abastecer estoque
+                    [5] Repor estoque
                     [0] Sair"""));
             switch (op){
                 case 1:
@@ -27,7 +27,7 @@ public class MenuPrincipal {
                     MenuProduto.menuProduto();
                     break;
                 case 4:
-                    MenuEfetuarVenda.menuEfetuarVenda();
+                    MenuVenda.menuVenda();
                     break;
                 case 5:
                     MenuAbastecerEstoque.menuAbastecerEstoque();
@@ -51,7 +51,6 @@ public class MenuPrincipal {
                     } else {
                         MenuPrincipal.menuPrincipal();
                     }
-
             }
 
         }while(op != 0);

@@ -7,12 +7,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class ProtudoCadastrado extends Produtos {
+public class ProtudoCadastradoService extends Produtos {
 
-    private static ProtudoCadastrado protudoCadastradoService;
-    private static List<ProtudoCadastrado> listarProduto = new ArrayList<>();
+    private static ProtudoCadastradoService protudoCadastradoService;
+    private static List<ProtudoCadastradoService> listarProduto = new ArrayList<>();
 
-    private ProtudoCadastrado() {
+    private ProtudoCadastradoService() {
     }
 
     public Integer getCodigo() {
@@ -95,19 +95,19 @@ public class ProtudoCadastrado extends Produtos {
         super.setPontoDeVenda(ptVenda);
     }
 
-    public static List<ProtudoCadastrado> getListarProduto() {
+    public static List<ProtudoCadastradoService> getListarProduto() {
         return listarProduto;
     }
 
-    public static void setListarProduto(List<ProtudoCadastrado> listarProduto) {
-        ProtudoCadastrado.listarProduto = listarProduto;
+    public static void setListarProduto(List<ProtudoCadastradoService> listarProduto) {
+        ProtudoCadastradoService.listarProduto = listarProduto;
     }
 
-    public static ProtudoCadastrado getInstance() {
+    public static ProtudoCadastradoService getInstance() {
         if (Objects.nonNull(protudoCadastradoService)) {
             return protudoCadastradoService;
         }
-        protudoCadastradoService = new ProtudoCadastrado();
+        protudoCadastradoService = new ProtudoCadastradoService();
         return protudoCadastradoService;
     }
 }

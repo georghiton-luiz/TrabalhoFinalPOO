@@ -5,11 +5,11 @@ import model.PontoDeVenda;
 
 import java.util.Objects;
 
-public class PontoDeVendaCadastrado extends PontoDeVenda {
+public class PontoDeVendaCadastradoService extends PontoDeVenda {
 
-    private static PontoDeVendaCadastrado pontoDeVendaService;
+    private static PontoDeVendaCadastradoService pontoDeVendaService;
 
-    private PontoDeVendaCadastrado(){
+    private PontoDeVendaCadastradoService(){
 
     }
 
@@ -53,11 +53,11 @@ public class PontoDeVendaCadastrado extends PontoDeVenda {
         super.setFuncionario(funcionario);
     }
 
-    public static PontoDeVendaCadastrado getInstance() {
+    public static PontoDeVendaCadastradoService getInstance() {
         if (Objects.nonNull(pontoDeVendaService)) {
             return pontoDeVendaService;
         }
-        pontoDeVendaService = new PontoDeVendaCadastrado();
+        pontoDeVendaService = new PontoDeVendaCadastradoService();
         return pontoDeVendaService;
     }
 }

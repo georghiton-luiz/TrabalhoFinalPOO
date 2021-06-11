@@ -1,7 +1,7 @@
 package model;
 
-import service.FuncionarioCadastrado;
-import service.ProtudoCadastrado;
+import service.FuncionarioCadastradoService;
+import service.ProtudoCadastradoService;
 
 public class PontoDeVenda extends Endereco{
 
@@ -103,7 +103,7 @@ public class PontoDeVenda extends Endereco{
 	public String toStringFuncionario() {
 		return "PontoDeVenda: " +
 				"\nCódigo = " + codigo +
-				"\nCódigo do Funcionario = " + FuncionarioCadastrado.getInstance().getCodigo() +
+				"\nCódigo do Funcionario = " + FuncionarioCadastradoService.getInstance().getCodigo() +
 				"\nLogradouro = " + super.getLogradouro() +
 				"\nNúmero = " + super.getNum() +
 				"\nBairro = " + super.getBairro() +
@@ -119,7 +119,7 @@ public class PontoDeVenda extends Endereco{
 	public String toStringProduto() {
 		return "PontoDeVenda: " +
 				"\nCódigo = " + codigo +
-				"\nCódigo do Produto = " + ProtudoCadastrado.getInstance().getCodigo() +
+				"\nCódigo do Produto = " + ProtudoCadastradoService.getInstance().getCodigo() +
 				"\nLogradouro = " + super.getLogradouro() +
 				"\nNúmero = " + super.getNum() +
 				"\nBairro = " + super.getBairro() +

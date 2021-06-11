@@ -3,8 +3,8 @@ package exception;
 import javax.swing.JOptionPane;
 
 import repository.PesquisarCpfDAO;
-import service.FormatarDados;
-import service.ValidarDados;
+import service.FormatarDadosService;
+import service.ValidarDadosService;
 
 public class StatusCPFException extends Exception {
 
@@ -12,13 +12,13 @@ public class StatusCPFException extends Exception {
 
 	public StatusCPFException(String cpf) {
 
-		if (!ValidarDados.isCPF(FormatarDados.getCpfFormatado(cpf))) {
+		if (!ValidarDadosService.isCPF(FormatarDadosService.getCpfFormatado(cpf))) {
 			resp = "CPF invalido";
 			JOptionPane.showMessageDialog(null, resp);
-		} else if (!PesquisarCpfDAO.pesquisarCpf(FormatarDados.getCpfFormatado(cpf))) {
+		} else if (!PesquisarCpfDAO.pesquisarCpf(FormatarDadosService.getCpfFormatado(cpf))) {
 			resp = "CPF não cadastrado";
 			JOptionPane.showMessageDialog(null, resp);
-		} else if (PesquisarCpfDAO.pesquisarCpf(FormatarDados.getCpfFormatado(cpf))) {
+		} else if (PesquisarCpfDAO.pesquisarCpf(FormatarDadosService.getCpfFormatado(cpf))) {
 			resp = "CPF já cadastrado";
 			JOptionPane.showMessageDialog(null, resp);
 		}else {

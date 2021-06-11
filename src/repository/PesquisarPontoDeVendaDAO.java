@@ -1,6 +1,6 @@
 package repository;
 
-import service.PontoDeVendaCadastrado;
+import service.PontoDeVendaCadastradoService;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -20,22 +20,22 @@ public class PesquisarPontoDeVendaDAO {
 
         try {
             while (rs.next()){
-                PontoDeVendaCadastrado.getInstance().setCodigo(rs.getInt("cod_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setLogradouro(rs.getString("logradouro_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setNum(rs.getString("num_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setBairro(rs.getString("bairro_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setCidade(rs.getString("cidade_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setCidade(rs.getString("uf_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setComplemento(rs.getString("compl_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setCEP(rs.getString("cep_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setFone(rs.getString("fone_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setCelular(rs.getString("celular_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setEmail(rs.getString("email_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setCodigo(rs.getInt("cod_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setLogradouro(rs.getString("logradouro_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setNum(rs.getString("num_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setBairro(rs.getString("bairro_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setCidade(rs.getString("cidade_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setCidade(rs.getString("uf_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setComplemento(rs.getString("compl_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setCEP(rs.getString("cep_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setFone(rs.getString("fone_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setCelular(rs.getString("celular_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setEmail(rs.getString("email_ptvenda"));
                 PesquisarFuncionarioDAO.pesquisarFuncionario(rs.getInt("cod_fun"));
 
-                System.out.println(PontoDeVendaCadastrado.getInstance());
+                System.out.println(PontoDeVendaCadastradoService.getInstance());
             }
-            return PontoDeVendaCadastrado.getInstance().getCodigo().equals(cod);
+            return PontoDeVendaCadastradoService.getInstance().getCodigo().equals(cod);
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -51,20 +51,20 @@ public class PesquisarPontoDeVendaDAO {
 
         try {
             while (rs.next()){
-                PontoDeVendaCadastrado.getInstance().setCodigo(rs.getInt("cod_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setLogradouro(rs.getString("logradouro_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setNum(rs.getString("num_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setBairro(rs.getString("bairro_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setCidade(rs.getString("cidade_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setUf(rs.getString("uf_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setComplemento(rs.getString("compl_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setCEP(rs.getString("cep_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setFone(rs.getString("fone_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setCelular(rs.getString("celular_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setEmail(rs.getString("email_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setCodigo(rs.getInt("cod_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setLogradouro(rs.getString("logradouro_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setNum(rs.getString("num_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setBairro(rs.getString("bairro_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setCidade(rs.getString("cidade_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setUf(rs.getString("uf_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setComplemento(rs.getString("compl_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setCEP(rs.getString("cep_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setFone(rs.getString("fone_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setCelular(rs.getString("celular_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setEmail(rs.getString("email_ptvenda"));
                 PesquisarFuncionarioDAO.pesquisarFuncionario(rs.getInt("cod_fun"));
 
-                System.out.println(PontoDeVendaCadastrado.getInstance());
+                System.out.println(PontoDeVendaCadastradoService.getInstance());
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -80,20 +80,20 @@ public class PesquisarPontoDeVendaDAO {
 
         try {
             while (rs.next()){
-                PontoDeVendaCadastrado.getInstance().setCodigo(rs.getInt("cod_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setLogradouro(rs.getString("logradouro_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setNum(rs.getString("num_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setBairro(rs.getString("bairro_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setCidade(rs.getString("cidade_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setCidade(rs.getString("uf_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setComplemento(rs.getString("compl_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setCEP(rs.getString("cep_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setFone(rs.getString("fone_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setCelular(rs.getString("celular_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setEmail(rs.getString("email_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setCodigo(rs.getInt("cod_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setLogradouro(rs.getString("logradouro_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setNum(rs.getString("num_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setBairro(rs.getString("bairro_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setCidade(rs.getString("cidade_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setCidade(rs.getString("uf_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setComplemento(rs.getString("compl_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setCEP(rs.getString("cep_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setFone(rs.getString("fone_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setCelular(rs.getString("celular_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setEmail(rs.getString("email_ptvenda"));
                 PesquisarFuncionarioDAO.pesquisarFuncionario(rs.getInt("cod_fun"));
 
-                System.out.println(PontoDeVendaCadastrado.getInstance());
+                System.out.println(PontoDeVendaCadastradoService.getInstance());
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -109,20 +109,20 @@ public class PesquisarPontoDeVendaDAO {
 
         try {
             while (rs.next()){
-                PontoDeVendaCadastrado.getInstance().setCodigo(rs.getInt("cod_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setLogradouro(rs.getString("logradouro_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setNum(rs.getString("num_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setBairro(rs.getString("bairro_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setCidade(rs.getString("cidade_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setCidade(rs.getString("uf_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setComplemento(rs.getString("compl_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setCEP(rs.getString("cep_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setFone(rs.getString("fone_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setCelular(rs.getString("celular_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setEmail(rs.getString("email_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setCodigo(rs.getInt("cod_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setLogradouro(rs.getString("logradouro_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setNum(rs.getString("num_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setBairro(rs.getString("bairro_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setCidade(rs.getString("cidade_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setCidade(rs.getString("uf_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setComplemento(rs.getString("compl_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setCEP(rs.getString("cep_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setFone(rs.getString("fone_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setCelular(rs.getString("celular_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setEmail(rs.getString("email_ptvenda"));
                 PesquisarFuncionarioDAO.pesquisarFuncionario(rs.getInt("cod_fun"));
 
-                System.out.println(PontoDeVendaCadastrado.getInstance());
+                System.out.println(PontoDeVendaCadastradoService.getInstance());
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -138,20 +138,20 @@ public class PesquisarPontoDeVendaDAO {
 
         try {
             while (rs.next()){
-                PontoDeVendaCadastrado.getInstance().setCodigo(rs.getInt("cod_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setLogradouro(rs.getString("logradouro_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setNum(rs.getString("num_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setBairro(rs.getString("bairro_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setCidade(rs.getString("cidade_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setCidade(rs.getString("uf_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setComplemento(rs.getString("compl_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setCEP(rs.getString("cep_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setFone(rs.getString("fone_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setCelular(rs.getString("celular_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setEmail(rs.getString("email_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setCodigo(rs.getInt("cod_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setLogradouro(rs.getString("logradouro_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setNum(rs.getString("num_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setBairro(rs.getString("bairro_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setCidade(rs.getString("cidade_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setCidade(rs.getString("uf_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setComplemento(rs.getString("compl_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setCEP(rs.getString("cep_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setFone(rs.getString("fone_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setCelular(rs.getString("celular_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setEmail(rs.getString("email_ptvenda"));
                 PesquisarFuncionarioDAO.pesquisarFuncionario(rs.getInt("cod_fun"));
 
-                System.out.println(PontoDeVendaCadastrado.getInstance().toStringFuncionario());
+                System.out.println(PontoDeVendaCadastradoService.getInstance().toStringFuncionario());
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -167,20 +167,20 @@ public class PesquisarPontoDeVendaDAO {
 
         try {
             while (rs.next()){
-                PontoDeVendaCadastrado.getInstance().setCodigo(rs.getInt("cod_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setLogradouro(rs.getString("logradouro_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setNum(rs.getString("num_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setBairro(rs.getString("bairro_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setCidade(rs.getString("cidade_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setCidade(rs.getString("uf_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setComplemento(rs.getString("compl_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setCEP(rs.getString("cep_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setFone(rs.getString("fone_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setCelular(rs.getString("celular_ptvenda"));
-                PontoDeVendaCadastrado.getInstance().setEmail(rs.getString("email_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setCodigo(rs.getInt("cod_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setLogradouro(rs.getString("logradouro_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setNum(rs.getString("num_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setBairro(rs.getString("bairro_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setCidade(rs.getString("cidade_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setCidade(rs.getString("uf_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setComplemento(rs.getString("compl_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setCEP(rs.getString("cep_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setFone(rs.getString("fone_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setCelular(rs.getString("celular_ptvenda"));
+                PontoDeVendaCadastradoService.getInstance().setEmail(rs.getString("email_ptvenda"));
                 PesquisarProdutoDAO.pesquisarProdutoCodigo(rs.getInt("cod_produto"));
 
-                System.out.println(PontoDeVendaCadastrado.getInstance().toStringProduto());
+                System.out.println(PontoDeVendaCadastradoService.getInstance().toStringProduto());
             }
         } catch (SQLException e) {
             e.printStackTrace();

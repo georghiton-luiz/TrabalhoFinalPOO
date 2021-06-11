@@ -3,7 +3,7 @@ package service;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class ValidarDados {
+public class ValidarDadosService {
 
     //Validador de CPF
     public static boolean isCPF(String cpf) {

@@ -1,9 +1,7 @@
 package repository;
 
 
-import model.Funcionario;
-import model.PontoDeVenda;
-import model.Produtos;
+import model.*;
 
 import javax.swing.*;
 
@@ -43,6 +41,24 @@ public class CadastroDAO {
 				+ "','" + funcionario.getUf() + "','" + funcionario.getComplemento() + "','" + funcionario.getCEP() + "','"	+ funcionario.getFone()
 				+ "','" + funcionario.getCelular() + "','" + funcionario.getEmail() + "','" + funcionario.getRedeSocial()
 				+ "','" + funcionario.getUserName() + "','" + funcionario.getSenha() +"')";
+		ConexaoDAO.getInstance().executaSQL(query);
+		JOptionPane.showMessageDialog(null, "Cadastro realizado");
+	}
+
+	public static void cadastrarVenda(Venda venda){
+
+		String query = "INSERT INTO funcionario (cod_venda, cod_ptVenda, cod_fun, cod_produto, qtd_venda)values"
+				+ "(default, " + venda.getCodPtVenda() + ", " + venda.getCodFun() + ", "
+				+ venda.getCodProduto() + ", " + venda.getQtd() + ")";
+		ConexaoDAO.getInstance().executaSQL(query);
+		JOptionPane.showMessageDialog(null, "Cadastro realizado");
+	}
+
+	public static void cadastrarAbastecimento(Abestecer venda){
+
+		String query = "INSERT INTO funcionario (cod_venda, cod_ptVenda, cod_produto, qtd_venda)values"
+				+ "(default, " + venda.getCodPtVenda() + ", "
+				+ venda.getCodProduto() + ", " + venda.getQtd() + ")";
 		ConexaoDAO.getInstance().executaSQL(query);
 		JOptionPane.showMessageDialog(null, "Cadastro realizado");
 	}

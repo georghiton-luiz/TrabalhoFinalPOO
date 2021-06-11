@@ -1,6 +1,6 @@
 package controller;
 
-import service.Cadastro;
+import service.CadastroService;
 
 import javax.swing.*;
 
@@ -16,12 +16,15 @@ public class MenuProduto {
                     [2] Listar Produto
                     [3] Editar Produto
                     [4] Deletar Produto
+                    [5] Vender Produto
                     [0] Sair"""));
             switch (op) {
-                case 1 -> Cadastro.cadProduto();
+                case 1 -> CadastroService.cadProduto();
                 case 2 -> MenuListaProduto.menuListarProduto();
                 case 3 -> MenuEditarProduto.menuEditarProduto();
                 case 4 -> MenuDeletarProtudo.menuDeletarProduto();
+                case 5 -> MenuVenda.menuVenda();
+
             }
         } while (op != 0);
     }

@@ -1,6 +1,6 @@
 package repository;
 
-import service.FuncionarioCadastrado;
+import service.FuncionarioCadastradoService;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -16,24 +16,25 @@ public class PesquisarFuncionarioDAO {
 
         try {
             while (rs.next()){
-                FuncionarioCadastrado.getInstance().setCodigo(rs.getInt("cod_fun"));
-                FuncionarioCadastrado.getInstance().setNome(rs.getString("nome_fun"));
-                FuncionarioCadastrado.getInstance().setCPF(rs.getString("cpf_fun"));
-                FuncionarioCadastrado.getInstance().setLogradouro(rs.getString("logradouro_fun"));
-                FuncionarioCadastrado.getInstance().setNum(rs.getString("num_fun"));
-                FuncionarioCadastrado.getInstance().setBairro(rs.getString("bairro_fun"));
-                FuncionarioCadastrado.getInstance().setCidade(rs.getString("cidade_fun"));
-                FuncionarioCadastrado.getInstance().setUf(rs.getString("uf_fun"));
-                FuncionarioCadastrado.getInstance().setComplemento(rs.getString("compl_fun"));
-                FuncionarioCadastrado.getInstance().setCEP(rs.getString("cep_fun"));
-                FuncionarioCadastrado.getInstance().setFone(rs.getString("fone_fun"));
-                FuncionarioCadastrado.getInstance().setCelular(rs.getString("celular_fun"));
-                FuncionarioCadastrado.getInstance().setEmail(rs.getString("email_fun"));
-                FuncionarioCadastrado.getInstance().setRedeSocial(rs.getString("redesociais_fun"));
-                FuncionarioCadastrado.getInstance().setUserName(rs.getString("username_fun"));
-                FuncionarioCadastrado.getInstance().setSenha(rs.getString("senha_fun"));
+                FuncionarioCadastradoService.getInstance().setCodigo(rs.getInt("cod_fun"));
+                FuncionarioCadastradoService.getInstance().setNome(rs.getString("nome_fun"));
+                FuncionarioCadastradoService.setDataNasc(rs.getDate("data_nasc_fun"));
+                FuncionarioCadastradoService.getInstance().setCPF(rs.getString("cpf_fun"));
+                FuncionarioCadastradoService.getInstance().setLogradouro(rs.getString("logradouro_fun"));
+                FuncionarioCadastradoService.getInstance().setNum(rs.getString("num_fun"));
+                FuncionarioCadastradoService.getInstance().setBairro(rs.getString("bairro_fun"));
+                FuncionarioCadastradoService.getInstance().setCidade(rs.getString("cidade_fun"));
+                FuncionarioCadastradoService.getInstance().setUf(rs.getString("uf_fun"));
+                FuncionarioCadastradoService.getInstance().setComplemento(rs.getString("compl_fun"));
+                FuncionarioCadastradoService.getInstance().setCEP(rs.getString("cep_fun"));
+                FuncionarioCadastradoService.getInstance().setFone(rs.getString("fone_fun"));
+                FuncionarioCadastradoService.getInstance().setCelular(rs.getString("celular_fun"));
+                FuncionarioCadastradoService.getInstance().setEmail(rs.getString("email_fun"));
+                FuncionarioCadastradoService.getInstance().setRedeSocial(rs.getString("redesociais_fun"));
+                FuncionarioCadastradoService.getInstance().setUserName(rs.getString("username_fun"));
+                FuncionarioCadastradoService.getInstance().setSenha(rs.getString("senha_fun"));
             }
-            return FuncionarioCadastrado.getInstance().getCodigo().equals(cod);
+            return FuncionarioCadastradoService.getInstance().getCodigo().equals(cod);
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -49,25 +50,26 @@ public class PesquisarFuncionarioDAO {
 
         try {
             while (rs.next()){
-                FuncionarioCadastrado.getInstance().setCodigo(rs.getInt("cod_fun"));
-                FuncionarioCadastrado.getInstance().setNome(rs.getString("nome_fun"));
-                FuncionarioCadastrado.getInstance().setCPF(rs.getString("cpf_fun"));
-                FuncionarioCadastrado.setDataNasc(rs.getDate("data_nasc_fun"));
-                FuncionarioCadastrado.getInstance().setLogradouro(rs.getString("logradouro_fun"));
-                FuncionarioCadastrado.getInstance().setNum(rs.getString("num_fun"));
-                FuncionarioCadastrado.getInstance().setBairro(rs.getString("bairro_fun"));
-                FuncionarioCadastrado.getInstance().setCidade(rs.getString("cidade_fun"));
-                FuncionarioCadastrado.getInstance().setUf(rs.getString("uf_fun"));
-                FuncionarioCadastrado.getInstance().setComplemento(rs.getString("compl_fun"));
-                FuncionarioCadastrado.getInstance().setCEP(rs.getString("cep_fun"));
-                FuncionarioCadastrado.getInstance().setFone(rs.getString("fone_fun"));
-                FuncionarioCadastrado.getInstance().setCelular(rs.getString("celular_fun"));
-                FuncionarioCadastrado.getInstance().setEmail(rs.getString("email_fun"));
-                FuncionarioCadastrado.getInstance().setRedeSocial(rs.getString("redesociais_fun"));
-                FuncionarioCadastrado.getInstance().setUserName(rs.getString("username_fun"));
-                FuncionarioCadastrado.getInstance().setSenha(rs.getString("senha_fun"));
+                FuncionarioCadastradoService.getInstance().setCodigo(rs.getInt("cod_fun"));
+                FuncionarioCadastradoService.getInstance().setNome(rs.getString("nome_fun"));
+                FuncionarioCadastradoService.setDataNasc(rs.getDate("data_nasc_fun"));
+                FuncionarioCadastradoService.getInstance().setCPF(rs.getString("cpf_fun"));
+                FuncionarioCadastradoService.setDataNasc(rs.getDate("data_nasc_fun"));
+                FuncionarioCadastradoService.getInstance().setLogradouro(rs.getString("logradouro_fun"));
+                FuncionarioCadastradoService.getInstance().setNum(rs.getString("num_fun"));
+                FuncionarioCadastradoService.getInstance().setBairro(rs.getString("bairro_fun"));
+                FuncionarioCadastradoService.getInstance().setCidade(rs.getString("cidade_fun"));
+                FuncionarioCadastradoService.getInstance().setUf(rs.getString("uf_fun"));
+                FuncionarioCadastradoService.getInstance().setComplemento(rs.getString("compl_fun"));
+                FuncionarioCadastradoService.getInstance().setCEP(rs.getString("cep_fun"));
+                FuncionarioCadastradoService.getInstance().setFone(rs.getString("fone_fun"));
+                FuncionarioCadastradoService.getInstance().setCelular(rs.getString("celular_fun"));
+                FuncionarioCadastradoService.getInstance().setEmail(rs.getString("email_fun"));
+                FuncionarioCadastradoService.getInstance().setRedeSocial(rs.getString("redesociais_fun"));
+                FuncionarioCadastradoService.getInstance().setUserName(rs.getString("username_fun"));
+                FuncionarioCadastradoService.getInstance().setSenha(rs.getString("senha_fun"));
 
-                System.out.println(FuncionarioCadastrado.getInstance());
+                System.out.println(FuncionarioCadastradoService.getInstance());
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -83,25 +85,25 @@ public class PesquisarFuncionarioDAO {
 
         try {
             while (rs.next()){
-                FuncionarioCadastrado.getInstance().setCodigo(rs.getInt("cod_fun"));
-                FuncionarioCadastrado.getInstance().setNome(rs.getString("nome_fun"));
-                FuncionarioCadastrado.getInstance().setCPF(rs.getString("cpf_fun"));
-                FuncionarioCadastrado.setDataNasc(rs.getDate("data_nasc_fun"));
-                FuncionarioCadastrado.getInstance().setLogradouro(rs.getString("logradouro_fun"));
-                FuncionarioCadastrado.getInstance().setNum(rs.getString("num_fun"));
-                FuncionarioCadastrado.getInstance().setBairro(rs.getString("bairro_fun"));
-                FuncionarioCadastrado.getInstance().setCidade(rs.getString("cidade_fun"));
-                FuncionarioCadastrado.getInstance().setUf(rs.getString("uf_fun"));
-                FuncionarioCadastrado.getInstance().setComplemento(rs.getString("compl_fun"));
-                FuncionarioCadastrado.getInstance().setCEP(rs.getString("cep_fun"));
-                FuncionarioCadastrado.getInstance().setFone(rs.getString("fone_fun"));
-                FuncionarioCadastrado.getInstance().setCelular(rs.getString("celular_fun"));
-                FuncionarioCadastrado.getInstance().setEmail(rs.getString("email_fun"));
-                FuncionarioCadastrado.getInstance().setRedeSocial(rs.getString("redesociais_fun"));
-                FuncionarioCadastrado.getInstance().setUserName(rs.getString("username_fun"));
-                FuncionarioCadastrado.getInstance().setSenha(rs.getString("senha_fun"));
+                FuncionarioCadastradoService.getInstance().setCodigo(rs.getInt("cod_fun"));
+                FuncionarioCadastradoService.getInstance().setNome(rs.getString("nome_fun"));
+                FuncionarioCadastradoService.setDataNasc(rs.getDate("data_nasc_fun"));
+                FuncionarioCadastradoService.getInstance().setCPF(rs.getString("cpf_fun"));
+                FuncionarioCadastradoService.getInstance().setLogradouro(rs.getString("logradouro_fun"));
+                FuncionarioCadastradoService.getInstance().setNum(rs.getString("num_fun"));
+                FuncionarioCadastradoService.getInstance().setBairro(rs.getString("bairro_fun"));
+                FuncionarioCadastradoService.getInstance().setCidade(rs.getString("cidade_fun"));
+                FuncionarioCadastradoService.getInstance().setUf(rs.getString("uf_fun"));
+                FuncionarioCadastradoService.getInstance().setComplemento(rs.getString("compl_fun"));
+                FuncionarioCadastradoService.getInstance().setCEP(rs.getString("cep_fun"));
+                FuncionarioCadastradoService.getInstance().setFone(rs.getString("fone_fun"));
+                FuncionarioCadastradoService.getInstance().setCelular(rs.getString("celular_fun"));
+                FuncionarioCadastradoService.getInstance().setEmail(rs.getString("email_fun"));
+                FuncionarioCadastradoService.getInstance().setRedeSocial(rs.getString("redesociais_fun"));
+                FuncionarioCadastradoService.getInstance().setUserName(rs.getString("username_fun"));
+                FuncionarioCadastradoService.getInstance().setSenha(rs.getString("senha_fun"));
 
-                System.out.println(FuncionarioCadastrado.getInstance());
+                System.out.println(FuncionarioCadastradoService.getInstance());
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -117,25 +119,25 @@ public class PesquisarFuncionarioDAO {
 
         try {
             while (rs.next()){
-                FuncionarioCadastrado.getInstance().setCodigo(rs.getInt("cod_fun"));
-                FuncionarioCadastrado.getInstance().setNome(rs.getString("nome_fun"));
-                FuncionarioCadastrado.getInstance().setCPF(rs.getString("cpf_fun"));
-                FuncionarioCadastrado.setDataNasc(rs.getDate("data_nasc_fun"));
-                FuncionarioCadastrado.getInstance().setLogradouro(rs.getString("logradouro_fun"));
-                FuncionarioCadastrado.getInstance().setNum(rs.getString("num_fun"));
-                FuncionarioCadastrado.getInstance().setBairro(rs.getString("bairro_fun"));
-                FuncionarioCadastrado.getInstance().setCidade(rs.getString("cidade_fun"));
-                FuncionarioCadastrado.getInstance().setUf(rs.getString("uf_fun"));
-                FuncionarioCadastrado.getInstance().setComplemento(rs.getString("compl_fun"));
-                FuncionarioCadastrado.getInstance().setCEP(rs.getString("cep_fun"));
-                FuncionarioCadastrado.getInstance().setFone(rs.getString("fone_fun"));
-                FuncionarioCadastrado.getInstance().setCelular(rs.getString("celular_fun"));
-                FuncionarioCadastrado.getInstance().setEmail(rs.getString("email_fun"));
-                FuncionarioCadastrado.getInstance().setRedeSocial(rs.getString("redesociais_fun"));
-                FuncionarioCadastrado.getInstance().setUserName(rs.getString("username_fun"));
-                FuncionarioCadastrado.getInstance().setSenha(rs.getString("senha_fun"));
+                FuncionarioCadastradoService.getInstance().setCodigo(rs.getInt("cod_fun"));
+                FuncionarioCadastradoService.getInstance().setNome(rs.getString("nome_fun"));
+                FuncionarioCadastradoService.setDataNasc(rs.getDate("data_nasc_fun"));
+                FuncionarioCadastradoService.getInstance().setCPF(rs.getString("cpf_fun"));
+                FuncionarioCadastradoService.getInstance().setLogradouro(rs.getString("logradouro_fun"));
+                FuncionarioCadastradoService.getInstance().setNum(rs.getString("num_fun"));
+                FuncionarioCadastradoService.getInstance().setBairro(rs.getString("bairro_fun"));
+                FuncionarioCadastradoService.getInstance().setCidade(rs.getString("cidade_fun"));
+                FuncionarioCadastradoService.getInstance().setUf(rs.getString("uf_fun"));
+                FuncionarioCadastradoService.getInstance().setComplemento(rs.getString("compl_fun"));
+                FuncionarioCadastradoService.getInstance().setCEP(rs.getString("cep_fun"));
+                FuncionarioCadastradoService.getInstance().setFone(rs.getString("fone_fun"));
+                FuncionarioCadastradoService.getInstance().setCelular(rs.getString("celular_fun"));
+                FuncionarioCadastradoService.getInstance().setEmail(rs.getString("email_fun"));
+                FuncionarioCadastradoService.getInstance().setRedeSocial(rs.getString("redesociais_fun"));
+                FuncionarioCadastradoService.getInstance().setUserName(rs.getString("username_fun"));
+                FuncionarioCadastradoService.getInstance().setSenha(rs.getString("senha_fun"));
 
-                System.out.println(FuncionarioCadastrado.getInstance().toStringPtVenda());
+                System.out.println(FuncionarioCadastradoService.getInstance().toStringPtVenda());
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -151,25 +153,26 @@ public class PesquisarFuncionarioDAO {
 
         try {
             while (rs.next()){
-                FuncionarioCadastrado.getInstance().setCodigo(rs.getInt("cod_fun"));
-                FuncionarioCadastrado.getInstance().setNome(rs.getString("nome_fun"));
-                FuncionarioCadastrado.getInstance().setCPF(rs.getString("cpf_fun"));
-                FuncionarioCadastrado.getInstance().setLogradouro(rs.getString("logradouro_fun"));
-                FuncionarioCadastrado.getInstance().setNum(rs.getString("num_fun"));
-                FuncionarioCadastrado.getInstance().setBairro(rs.getString("bairro_fun"));
-                FuncionarioCadastrado.getInstance().setCidade(rs.getString("cidade_fun"));
-                FuncionarioCadastrado.getInstance().setUf(rs.getString("uf_fun"));
-                FuncionarioCadastrado.getInstance().setComplemento(rs.getString("compl_fun"));
-                FuncionarioCadastrado.getInstance().setCEP(rs.getString("cep_fun"));
-                FuncionarioCadastrado.getInstance().setFone(rs.getString("fone_fun"));
-                FuncionarioCadastrado.getInstance().setCelular(rs.getString("celular_fun"));
-                FuncionarioCadastrado.getInstance().setEmail(rs.getString("email_fun"));
-                FuncionarioCadastrado.getInstance().setRedeSocial(rs.getString("redesociais_fun"));
-                FuncionarioCadastrado.getInstance().setUserName(rs.getString("username_fun"));
-                FuncionarioCadastrado.getInstance().setSenha(rs.getString("senha_fun"));
+                FuncionarioCadastradoService.getInstance().setCodigo(rs.getInt("cod_fun"));
+                FuncionarioCadastradoService.getInstance().setNome(rs.getString("nome_fun"));
+                FuncionarioCadastradoService.setDataNasc(rs.getDate("data_nasc_fun"));
+                FuncionarioCadastradoService.getInstance().setCPF(rs.getString("cpf_fun"));
+                FuncionarioCadastradoService.getInstance().setLogradouro(rs.getString("logradouro_fun"));
+                FuncionarioCadastradoService.getInstance().setNum(rs.getString("num_fun"));
+                FuncionarioCadastradoService.getInstance().setBairro(rs.getString("bairro_fun"));
+                FuncionarioCadastradoService.getInstance().setCidade(rs.getString("cidade_fun"));
+                FuncionarioCadastradoService.getInstance().setUf(rs.getString("uf_fun"));
+                FuncionarioCadastradoService.getInstance().setComplemento(rs.getString("compl_fun"));
+                FuncionarioCadastradoService.getInstance().setCEP(rs.getString("cep_fun"));
+                FuncionarioCadastradoService.getInstance().setFone(rs.getString("fone_fun"));
+                FuncionarioCadastradoService.getInstance().setCelular(rs.getString("celular_fun"));
+                FuncionarioCadastradoService.getInstance().setEmail(rs.getString("email_fun"));
+                FuncionarioCadastradoService.getInstance().setRedeSocial(rs.getString("redesociais_fun"));
+                FuncionarioCadastradoService.getInstance().setUserName(rs.getString("username_fun"));
+                FuncionarioCadastradoService.getInstance().setSenha(rs.getString("senha_fun"));
                 PesquisarPontoDeVendaDAO.pesquisarPontoDeVendaCodigo(rs.getInt("cod_ptvenda"));
 
-                System.out.println(FuncionarioCadastrado.getInstance().toStringPtVenda());
+                System.out.println(FuncionarioCadastradoService.getInstance().toStringPtVenda());
             }
         } catch (SQLException e) {
             e.printStackTrace();

@@ -1,6 +1,6 @@
 package controller;
 
-import service.Cadastro;
+import service.CadastroService;
 
 import javax.swing.*;
 
@@ -18,7 +18,7 @@ public class MenuPontoDeVenda {
                     [4] Deletar ponto de venda
                     [0] Sair"""));
             switch (op) {
-                case 1 -> Cadastro.cadPtVenda();
+                case 1 -> CadastroService.cadPtVenda();
                 case 2 -> MenuListaPontoDeVenda.menuListaPontoDeVenda();
                 case 3 -> MenuEditarPontoDeVenda.menuEditarPontoDeVenda();
                 case 4 -> MenuDeletarPontoDeVenda.menuDeletarPontoDeVenda();

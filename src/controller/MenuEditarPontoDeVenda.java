@@ -1,7 +1,7 @@
 package controller;
 
 import repository.EditarPontoDeVendaDAO;
-import service.FormatarDados;
+import service.FormatarDadosService;
 
 import javax.swing.*;
 
@@ -43,7 +43,7 @@ public class MenuEditarPontoDeVenda {
                 EditarPontoDeVendaDAO.editarComplementoPontoDeVenda(JOptionPane.showInputDialog("Digite no complemento correto").toUpperCase(), cod);
                 break;
             case 7:
-                EditarPontoDeVendaDAO.editarCEPPontoDeVenda(FormatarDados.getCepFormatado(JOptionPane.showInputDialog("Digite o CEP correto")),cod);
+                EditarPontoDeVendaDAO.editarCEPPontoDeVenda(FormatarDadosService.getCepFormatado(JOptionPane.showInputDialog("Digite o CEP correto")),cod);
                 break;
             case 0:
                 int resp = JOptionPane.showConfirmDialog(null, "Deseja sair da edição de ponto de venda", "ALERT",

@@ -1,14 +1,12 @@
 package controller;
 
-import repository.ConexaoDAO;
 import repository.EditarFuncionarioDAO;
 import repository.EditarPontoDeVendaDAO;
 import repository.PesquisarCpfDAO;
-import service.FormatarDados;
-import service.ValidarDados;
+import service.FormatarDadosService;
+import service.ValidarDadosService;
 
 import javax.swing.*;
-import java.time.LocalDate;
 
 public class MenuEditarFuncionario {
 
@@ -40,15 +38,15 @@ public class MenuEditarFuncionario {
                 break;
             case 2:
                 String cpf = JOptionPane.showInputDialog("Digite CPF correto");
-                boolean auxCpf = ValidarDados.isCPF(cpf);
-                while(!auxCpf || PesquisarCpfDAO.pesquisarCpf(FormatarDados.getCpfFormatado(cpf))){
-                    auxCpf = ValidarDados.isCPF(cpf = JOptionPane.showInputDialog("CPF invalido ou já cadastrado\nDigite CPF correto"));
+                boolean auxCpf = ValidarDadosService.isCPF(cpf);
+                while(!auxCpf || PesquisarCpfDAO.pesquisarCpf(FormatarDadosService.getCpfFormatado(cpf))){
+                    auxCpf = ValidarDadosService.isCPF(cpf = JOptionPane.showInputDialog("CPF invalido ou já cadastrado\nDigite CPF correto"));
                 }
-                cpf = FormatarDados.getCpfFormatado(cpf);
+                cpf = FormatarDadosService.getCpfFormatado(cpf);
                 EditarFuncionarioDAO.editarCEPFuncionario(cpf, cod);
                 break;
             case 3:
-                EditarFuncionarioDAO.editarDataNascFuncionario(FormatarDados.formatarData(JOptionPane.showInputDialog("Digite a data de nascimento correta")),cod);
+                EditarFuncionarioDAO.editarDataNascFuncionario(FormatarDadosService.formatarData(JOptionPane.showInputDialog("Digite a data de nascimento correta")),cod);
                 break;
             case 4:
                 EditarFuncionarioDAO.editarRuaFuncionario(JOptionPane.showInputDialog("Digite o logradouro correto").toUpperCase(), cod);
@@ -68,7 +66,7 @@ public class MenuEditarFuncionario {
             case 9:
                 EditarFuncionarioDAO.editarComplementoFuncionario(JOptionPane.showInputDialog("Digite no complemento correto").toUpperCase(), cod);
             case 10:
-                EditarPontoDeVendaDAO.editarCEPPontoDeVenda(FormatarDados.getCepFormatado(JOptionPane.showInputDialog("Digite o CEP correto")), cod);
+                EditarPontoDeVendaDAO.editarCEPPontoDeVenda(FormatarDadosService.getCepFormatado(JOptionPane.showInputDialog("Digite o CEP correto")), cod);
             case 0:
                 int resp = JOptionPane.showConfirmDialog(null, "Deseja sair da edição de ponto de venda", "ALERT",
                         JOptionPane.YES_NO_OPTION);

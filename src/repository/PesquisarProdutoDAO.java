@@ -1,8 +1,8 @@
 package repository;
 
 import controller.MenuListaProduto;
-import service.PontoDeVendaCadastrado;
-import service.ProtudoCadastrado;
+import service.PontoDeVendaCadastradoService;
+import service.ProtudoCadastradoService;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -17,24 +17,24 @@ public class PesquisarProdutoDAO {
 
         ResultSet rs = ConexaoDAO.getInstance().executaBusca(query);
 
-        List<ProtudoCadastrado> list = new ArrayList<>();
+        List<ProtudoCadastradoService> list = new ArrayList<>();
 
         try {
             while (rs.next()){
-                ProtudoCadastrado.getInstance().setCodigo(rs.getInt("cod_produto"));
-                ProtudoCadastrado.getInstance().setCategoria(rs.getString("categoria_produto"));
-                ProtudoCadastrado.getInstance().setTipo(rs.getString("tipo_produto"));
-                ProtudoCadastrado.getInstance().setTamanho(rs.getString("tamanho_produto"));
-                ProtudoCadastrado.getInstance().setModelo(rs.getString("modelo_produto"));
-                ProtudoCadastrado.getInstance().setCor(rs.getString("cor_produto"));
-                ProtudoCadastrado.getInstance().setDescricao(rs.getString("descricao_produto"));
-                ProtudoCadastrado.getInstance().setQuantidade(rs.getInt("qtd_produto"));
-                ProtudoCadastrado.getInstance().setPreco(rs.getDouble("preco_produto"));
+                ProtudoCadastradoService.getInstance().setCodigo(rs.getInt("cod_produto"));
+                ProtudoCadastradoService.getInstance().setCategoria(rs.getString("categoria_produto"));
+                ProtudoCadastradoService.getInstance().setTipo(rs.getString("tipo_produto"));
+                ProtudoCadastradoService.getInstance().setTamanho(rs.getString("tamanho_produto"));
+                ProtudoCadastradoService.getInstance().setModelo(rs.getString("modelo_produto"));
+                ProtudoCadastradoService.getInstance().setCor(rs.getString("cor_produto"));
+                ProtudoCadastradoService.getInstance().setDescricao(rs.getString("descricao_produto"));
+                ProtudoCadastradoService.getInstance().setQuantidade(rs.getInt("qtd_produto"));
+                ProtudoCadastradoService.getInstance().setPreco(rs.getDouble("preco_produto"));
                 PesquisarPontoDeVendaDAO.pesquisarPontoDeVenda(rs.getInt("cod_ptvenda"));
 
-                System.out.println(ProtudoCadastrado.getInstance());
+                System.out.println(ProtudoCadastradoService.getInstance());
             }
-            return PontoDeVendaCadastrado.getInstance().getCodigo().equals(pesquisar);
+            return PontoDeVendaCadastradoService.getInstance().getCodigo().equals(pesquisar);
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -47,22 +47,22 @@ public class PesquisarProdutoDAO {
 
         ResultSet rs = ConexaoDAO.getInstance().executaBusca(query);
 
-        List<ProtudoCadastrado> list = new ArrayList<>();
+        List<ProtudoCadastradoService> list = new ArrayList<>();
 
         try {
             while (rs.next()){
-                ProtudoCadastrado.getInstance().setCodigo(rs.getInt("cod_produto"));
-                ProtudoCadastrado.getInstance().setCategoria(rs.getString("categoria_produto"));
-                ProtudoCadastrado.getInstance().setTipo(rs.getString("tipo_produto"));
-                ProtudoCadastrado.getInstance().setTamanho(rs.getString("tamanho_produto"));
-                ProtudoCadastrado.getInstance().setModelo(rs.getString("modelo_produto"));
-                ProtudoCadastrado.getInstance().setCor(rs.getString("cor_produto"));
-                ProtudoCadastrado.getInstance().setDescricao(rs.getString("descricao_produto"));
-                ProtudoCadastrado.getInstance().setQuantidade(rs.getInt("qtd_produto"));
-                ProtudoCadastrado.getInstance().setPreco(rs.getDouble("preco_produto"));
+                ProtudoCadastradoService.getInstance().setCodigo(rs.getInt("cod_produto"));
+                ProtudoCadastradoService.getInstance().setCategoria(rs.getString("categoria_produto"));
+                ProtudoCadastradoService.getInstance().setTipo(rs.getString("tipo_produto"));
+                ProtudoCadastradoService.getInstance().setTamanho(rs.getString("tamanho_produto"));
+                ProtudoCadastradoService.getInstance().setModelo(rs.getString("modelo_produto"));
+                ProtudoCadastradoService.getInstance().setCor(rs.getString("cor_produto"));
+                ProtudoCadastradoService.getInstance().setDescricao(rs.getString("descricao_produto"));
+                ProtudoCadastradoService.getInstance().setQuantidade(rs.getInt("qtd_produto"));
+                ProtudoCadastradoService.getInstance().setPreco(rs.getDouble("preco_produto"));
                 PesquisarPontoDeVendaDAO.pesquisarPontoDeVenda(rs.getInt("cod_ptvenda"));
 
-                System.out.println(ProtudoCadastrado.getInstance());
+                System.out.println(ProtudoCadastradoService.getInstance());
             }
 
             MenuListaProduto.menuListarProduto();
@@ -77,22 +77,22 @@ public class PesquisarProdutoDAO {
 
         ResultSet rs = ConexaoDAO.getInstance().executaBusca(query);
 
-        List<ProtudoCadastrado> list = new ArrayList<>();
+        List<ProtudoCadastradoService> list = new ArrayList<>();
 
         try {
             while (rs.next()){
-                ProtudoCadastrado.getInstance().setCodigo(rs.getInt("cod_produto"));
-                ProtudoCadastrado.getInstance().setCategoria(rs.getString("categoria_produto"));
-                ProtudoCadastrado.getInstance().setTipo(rs.getString("tipo_produto"));
-                ProtudoCadastrado.getInstance().setTamanho(rs.getString("tamanho_produto"));
-                ProtudoCadastrado.getInstance().setModelo(rs.getString("modelo_produto"));
-                ProtudoCadastrado.getInstance().setCor(rs.getString("cor_produto"));
-                ProtudoCadastrado.getInstance().setDescricao(rs.getString("descricao_produto"));
-                ProtudoCadastrado.getInstance().setQuantidade(rs.getInt("qtd_produto"));
-                ProtudoCadastrado.getInstance().setPreco(rs.getDouble("preco_produto"));
+                ProtudoCadastradoService.getInstance().setCodigo(rs.getInt("cod_produto"));
+                ProtudoCadastradoService.getInstance().setCategoria(rs.getString("categoria_produto"));
+                ProtudoCadastradoService.getInstance().setTipo(rs.getString("tipo_produto"));
+                ProtudoCadastradoService.getInstance().setTamanho(rs.getString("tamanho_produto"));
+                ProtudoCadastradoService.getInstance().setModelo(rs.getString("modelo_produto"));
+                ProtudoCadastradoService.getInstance().setCor(rs.getString("cor_produto"));
+                ProtudoCadastradoService.getInstance().setDescricao(rs.getString("descricao_produto"));
+                ProtudoCadastradoService.getInstance().setQuantidade(rs.getInt("qtd_produto"));
+                ProtudoCadastradoService.getInstance().setPreco(rs.getDouble("preco_produto"));
                 PesquisarPontoDeVendaDAO.pesquisarPontoDeVenda(rs.getInt("cod_ptvenda"));
 
-                System.out.println(ProtudoCadastrado.getInstance());
+                System.out.println(ProtudoCadastradoService.getInstance());
             }
 
             MenuListaProduto.menuListarProduto();
@@ -107,22 +107,22 @@ public class PesquisarProdutoDAO {
 
         ResultSet rs = ConexaoDAO.getInstance().executaBusca(query);
 
-        List<ProtudoCadastrado> list = new ArrayList<>();
+        List<ProtudoCadastradoService> list = new ArrayList<>();
 
         try {
             while (rs.next()){
-                ProtudoCadastrado.getInstance().setCodigo(rs.getInt("cod_produto"));
-                ProtudoCadastrado.getInstance().setCategoria(rs.getString("categoria_produto"));
-                ProtudoCadastrado.getInstance().setTipo(rs.getString("tipo_produto"));
-                ProtudoCadastrado.getInstance().setTamanho(rs.getString("tamanho_produto"));
-                ProtudoCadastrado.getInstance().setModelo(rs.getString("modelo_produto"));
-                ProtudoCadastrado.getInstance().setCor(rs.getString("cor_produto"));
-                ProtudoCadastrado.getInstance().setDescricao(rs.getString("descricao_produto"));
-                ProtudoCadastrado.getInstance().setQuantidade(rs.getInt("qtd_produto"));
-                ProtudoCadastrado.getInstance().setPreco(rs.getDouble("preco_produto"));
+                ProtudoCadastradoService.getInstance().setCodigo(rs.getInt("cod_produto"));
+                ProtudoCadastradoService.getInstance().setCategoria(rs.getString("categoria_produto"));
+                ProtudoCadastradoService.getInstance().setTipo(rs.getString("tipo_produto"));
+                ProtudoCadastradoService.getInstance().setTamanho(rs.getString("tamanho_produto"));
+                ProtudoCadastradoService.getInstance().setModelo(rs.getString("modelo_produto"));
+                ProtudoCadastradoService.getInstance().setCor(rs.getString("cor_produto"));
+                ProtudoCadastradoService.getInstance().setDescricao(rs.getString("descricao_produto"));
+                ProtudoCadastradoService.getInstance().setQuantidade(rs.getInt("qtd_produto"));
+                ProtudoCadastradoService.getInstance().setPreco(rs.getDouble("preco_produto"));
                 PesquisarPontoDeVendaDAO.pesquisarPontoDeVenda(rs.getInt("cod_ptvenda"));
 
-                System.out.println(ProtudoCadastrado.getInstance());
+                System.out.println(ProtudoCadastradoService.getInstance());
             }
             MenuListaProduto.menuListarProduto();
         } catch (SQLException e) {
@@ -136,22 +136,22 @@ public class PesquisarProdutoDAO {
 
         ResultSet rs = ConexaoDAO.getInstance().executaBusca(query);
 
-        List<ProtudoCadastrado> list = new ArrayList<>();
+        List<ProtudoCadastradoService> list = new ArrayList<>();
 
         try {
             while (rs.next()){
-                ProtudoCadastrado.getInstance().setCodigo(rs.getInt("cod_produto"));
-                ProtudoCadastrado.getInstance().setCategoria(rs.getString("categoria_produto"));
-                ProtudoCadastrado.getInstance().setTipo(rs.getString("tipo_produto"));
-                ProtudoCadastrado.getInstance().setTamanho(rs.getString("tamanho_produto"));
-                ProtudoCadastrado.getInstance().setModelo(rs.getString("modelo_produto"));
-                ProtudoCadastrado.getInstance().setCor(rs.getString("cor_produto"));
-                ProtudoCadastrado.getInstance().setDescricao(rs.getString("descricao_produto"));
-                ProtudoCadastrado.getInstance().setQuantidade(rs.getInt("qtd_produto"));
-                ProtudoCadastrado.getInstance().setPreco(rs.getDouble("preco_produto"));
+                ProtudoCadastradoService.getInstance().setCodigo(rs.getInt("cod_produto"));
+                ProtudoCadastradoService.getInstance().setCategoria(rs.getString("categoria_produto"));
+                ProtudoCadastradoService.getInstance().setTipo(rs.getString("tipo_produto"));
+                ProtudoCadastradoService.getInstance().setTamanho(rs.getString("tamanho_produto"));
+                ProtudoCadastradoService.getInstance().setModelo(rs.getString("modelo_produto"));
+                ProtudoCadastradoService.getInstance().setCor(rs.getString("cor_produto"));
+                ProtudoCadastradoService.getInstance().setDescricao(rs.getString("descricao_produto"));
+                ProtudoCadastradoService.getInstance().setQuantidade(rs.getInt("qtd_produto"));
+                ProtudoCadastradoService.getInstance().setPreco(rs.getDouble("preco_produto"));
                 PesquisarPontoDeVendaDAO.pesquisarPontoDeVenda(rs.getInt("cod_ptvenda"));
 
-                System.out.println(ProtudoCadastrado.getInstance());
+                System.out.println(ProtudoCadastradoService.getInstance());
             }
             MenuListaProduto.menuListarProduto();
         } catch (SQLException e) {
@@ -165,22 +165,22 @@ public class PesquisarProdutoDAO {
 
         ResultSet rs = ConexaoDAO.getInstance().executaBusca(query);
 
-        List<ProtudoCadastrado> list = new ArrayList<>();
+        List<ProtudoCadastradoService> list = new ArrayList<>();
 
         try {
             while (rs.next()){
-                ProtudoCadastrado.getInstance().setCodigo(rs.getInt("cod_produto"));
-                ProtudoCadastrado.getInstance().setCategoria(rs.getString("categoria_produto"));
-                ProtudoCadastrado.getInstance().setTipo(rs.getString("tipo_produto"));
-                ProtudoCadastrado.getInstance().setTamanho(rs.getString("tamanho_produto"));
-                ProtudoCadastrado.getInstance().setModelo(rs.getString("modelo_produto"));
-                ProtudoCadastrado.getInstance().setCor(rs.getString("cor_produto"));
-                ProtudoCadastrado.getInstance().setDescricao(rs.getString("descricao_produto"));
-                ProtudoCadastrado.getInstance().setQuantidade(rs.getInt("qtd_produto"));
-                ProtudoCadastrado.getInstance().setPreco(rs.getDouble("preco_produto"));
+                ProtudoCadastradoService.getInstance().setCodigo(rs.getInt("cod_produto"));
+                ProtudoCadastradoService.getInstance().setCategoria(rs.getString("categoria_produto"));
+                ProtudoCadastradoService.getInstance().setTipo(rs.getString("tipo_produto"));
+                ProtudoCadastradoService.getInstance().setTamanho(rs.getString("tamanho_produto"));
+                ProtudoCadastradoService.getInstance().setModelo(rs.getString("modelo_produto"));
+                ProtudoCadastradoService.getInstance().setCor(rs.getString("cor_produto"));
+                ProtudoCadastradoService.getInstance().setDescricao(rs.getString("descricao_produto"));
+                ProtudoCadastradoService.getInstance().setQuantidade(rs.getInt("qtd_produto"));
+                ProtudoCadastradoService.getInstance().setPreco(rs.getDouble("preco_produto"));
                 PesquisarPontoDeVendaDAO.pesquisarPontoDeVenda(rs.getInt("cod_ptvenda"));
 
-                System.out.println(ProtudoCadastrado.getInstance());
+                System.out.println(ProtudoCadastradoService.getInstance());
             }
             MenuListaProduto.menuListarProduto();
         } catch (SQLException e) {
@@ -194,22 +194,22 @@ public class PesquisarProdutoDAO {
 
         ResultSet rs = ConexaoDAO.getInstance().executaBusca(query);
 
-        List<ProtudoCadastrado> list = new ArrayList<>();
+        List<ProtudoCadastradoService> list = new ArrayList<>();
 
         try {
             while (rs.next()){
-                ProtudoCadastrado.getInstance().setCodigo(rs.getInt("cod_produto"));
-                ProtudoCadastrado.getInstance().setCategoria(rs.getString("categoria_produto"));
-                ProtudoCadastrado.getInstance().setTipo(rs.getString("tipo_produto"));
-                ProtudoCadastrado.getInstance().setTamanho(rs.getString("tamanho_produto"));
-                ProtudoCadastrado.getInstance().setModelo(rs.getString("modelo_produto"));
-                ProtudoCadastrado.getInstance().setCor(rs.getString("cor_produto"));
-                ProtudoCadastrado.getInstance().setDescricao(rs.getString("descricao_produto"));
-                ProtudoCadastrado.getInstance().setQuantidade(rs.getInt("qtd_produto"));
-                ProtudoCadastrado.getInstance().setPreco(rs.getDouble("preco_produto"));
+                ProtudoCadastradoService.getInstance().setCodigo(rs.getInt("cod_produto"));
+                ProtudoCadastradoService.getInstance().setCategoria(rs.getString("categoria_produto"));
+                ProtudoCadastradoService.getInstance().setTipo(rs.getString("tipo_produto"));
+                ProtudoCadastradoService.getInstance().setTamanho(rs.getString("tamanho_produto"));
+                ProtudoCadastradoService.getInstance().setModelo(rs.getString("modelo_produto"));
+                ProtudoCadastradoService.getInstance().setCor(rs.getString("cor_produto"));
+                ProtudoCadastradoService.getInstance().setDescricao(rs.getString("descricao_produto"));
+                ProtudoCadastradoService.getInstance().setQuantidade(rs.getInt("qtd_produto"));
+                ProtudoCadastradoService.getInstance().setPreco(rs.getDouble("preco_produto"));
                 PesquisarPontoDeVendaDAO.pesquisarPontoDeVenda(rs.getInt("cod_ptvenda"));
 
-                System.out.println(ProtudoCadastrado.getInstance());
+                System.out.println(ProtudoCadastradoService.getInstance());
             }
             MenuListaProduto.menuListarProduto();
         } catch (SQLException e) {
@@ -222,22 +222,22 @@ public class PesquisarProdutoDAO {
 
         ResultSet rs = ConexaoDAO.getInstance().executaBusca(query);
 
-        List<ProtudoCadastrado> list = new ArrayList<>();
+        List<ProtudoCadastradoService> list = new ArrayList<>();
 
         try {
             while (rs.next()){
-                ProtudoCadastrado.getInstance().setCodigo(rs.getInt("cod_produto"));
-                ProtudoCadastrado.getInstance().setCategoria(rs.getString("categoria_produto"));
-                ProtudoCadastrado.getInstance().setTipo(rs.getString("tipo_produto"));
-                ProtudoCadastrado.getInstance().setTamanho(rs.getString("tamanho_produto"));
-                ProtudoCadastrado.getInstance().setModelo(rs.getString("modelo_produto"));
-                ProtudoCadastrado.getInstance().setCor(rs.getString("cor_produto"));
-                ProtudoCadastrado.getInstance().setDescricao(rs.getString("descricao_produto"));
-                ProtudoCadastrado.getInstance().setQuantidade(rs.getInt("qtd_produto"));
-                ProtudoCadastrado.getInstance().setPreco(rs.getDouble("preco_produto"));
+                ProtudoCadastradoService.getInstance().setCodigo(rs.getInt("cod_produto"));
+                ProtudoCadastradoService.getInstance().setCategoria(rs.getString("categoria_produto"));
+                ProtudoCadastradoService.getInstance().setTipo(rs.getString("tipo_produto"));
+                ProtudoCadastradoService.getInstance().setTamanho(rs.getString("tamanho_produto"));
+                ProtudoCadastradoService.getInstance().setModelo(rs.getString("modelo_produto"));
+                ProtudoCadastradoService.getInstance().setCor(rs.getString("cor_produto"));
+                ProtudoCadastradoService.getInstance().setDescricao(rs.getString("descricao_produto"));
+                ProtudoCadastradoService.getInstance().setQuantidade(rs.getInt("qtd_produto"));
+                ProtudoCadastradoService.getInstance().setPreco(rs.getDouble("preco_produto"));
                 PesquisarPontoDeVendaDAO.pesquisarPontoDeVenda(rs.getInt("cod_ptvenda"));
 
-                System.out.println(ProtudoCadastrado.getInstance());
+                System.out.println(ProtudoCadastradoService.getInstance());
             }
             MenuListaProduto.menuListarProduto();
         } catch (SQLException e) {

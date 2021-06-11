@@ -9,7 +9,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
-public class FormatarDados {
+public class FormatarDadosService {
 
     public static LocalDate formatarData(String dataNasc){
 
@@ -64,7 +64,7 @@ public class FormatarDados {
         try {
             mask = new MaskFormatter("###.###.###-##");
             mask.setValueContainsLiteralCharacters(false);
-            if(ValidarDados.isCPF(cpf)) {
+            if(ValidarDadosService.isCPF(cpf)) {
                 return mask.valueToString(cpf);
             }
         } catch (ParseException e) {
@@ -110,11 +110,11 @@ public class FormatarDados {
     public static String dataFormatada(java.sql.Date data){
 
         DateFormat formatUS = new SimpleDateFormat("yyyy-MM-dd");
-        FuncionarioCadastrado.setDataConvertida(formatUS.format(data));
-        LocalDate ldData = LocalDate.parse(FuncionarioCadastrado.getDataConvertida());
+        FuncionarioCadastradoService.setDataConvertida(formatUS.format(data));
+        LocalDate ldData = LocalDate.parse(FuncionarioCadastradoService.getDataConvertida());
         DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        FuncionarioCadastrado.setDataConvertida(fmt.format(ldData));
+        FuncionarioCadastradoService.setDataConvertida(fmt.format(ldData));
 
-        return FuncionarioCadastrado.getDataConvertida();
+        return FuncionarioCadastradoService.getDataConvertida();
     }
 }

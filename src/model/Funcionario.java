@@ -1,8 +1,8 @@
 package model;
 
-import service.FormatarDados;
-import service.FuncionarioCadastrado;
-import service.PontoDeVendaCadastrado;
+import service.FormatarDadosService;
+import service.FuncionarioCadastradoService;
+import service.PontoDeVendaCadastradoService;
 
 import java.time.LocalDate;
 
@@ -125,7 +125,7 @@ public class Funcionario extends Endereco{
 		return "Funcionario:" +
 				"\nCódigo: " + codigo +
 				"\nNome: " + nome +
-				"\nData Nascimento: " + FormatarDados.dataFormatada(FuncionarioCadastrado.getDataNasc()) +
+				"\nData Nascimento: " + FormatarDadosService.dataFormatada(FuncionarioCadastradoService.getDataNasc()) +
 				"\nCPF: " + CPF +
 				"\nLogradouro: " + super.getLogradouro() +
 				"\nNúmero: " + super.getNum() +
@@ -144,7 +144,7 @@ public class Funcionario extends Endereco{
 	public String toStringPtVenda() {
 		return "Funcionario:" +
 				"\nCódigo: " + codigo +
-				"\nCódigo do ponto de venda: " + PontoDeVendaCadastrado.getInstance().getCodigo() +
+				"\nCódigo do ponto de venda: " + PontoDeVendaCadastradoService.getInstance().getCodigo() +
 				"\nNome: " + nome +
 				"\nData Nascimento: " + dataNascimento +
 				"\nCPF: " + CPF +
