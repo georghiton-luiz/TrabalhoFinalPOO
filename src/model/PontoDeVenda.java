@@ -84,17 +84,16 @@ public class PontoDeVenda extends Endereco{
 		this.produto = produto;
 	}
 
-	@Override
 	public String toString() {
 		return "PontoDeVenda: " +
 				"\nCódigo = " + codigo +
-				"\n Logradouro = " + super.getLogradouro() +
-				"\n Número = " + super.getNum() +
-				"\n Bairro = " + super.getBairro() +
-				"\n Cidade = " + super.getCidade() +
-				"\n Estado = " + super.getUf() +
-				"\n Complemento = " + super.getComplemento() +
-				"\n CEP = " + super.getCEP() +
+				"\nLogradouro = " + super.getLogradouro() +
+				"\nNúmero = " + super.getNum() +
+				"\nBairro = " + super.getBairro() +
+				"\nCidade = " + super.getCidade() +
+				"\nEstado = " + super.getUf() +
+				"\nComplemento = " + super.getComplemento() +
+				"\nCEP = " + super.getCEP() +
 				"\nFone = " + fone +
 				"\nCelular = " + celular +
 				"\nE-mail = " + email;

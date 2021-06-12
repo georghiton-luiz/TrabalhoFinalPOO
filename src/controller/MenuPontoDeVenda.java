@@ -18,7 +18,7 @@ public class MenuPontoDeVenda {
                     [4] Deletar ponto de venda
                     [0] Sair"""));
             switch (op) {
-                case 1 -> CadastroService.cadPtVenda();
+                case 1 -> MenuCadastrarPontoDeVenda.menuCadastrarPontoDeVenda();
                 case 2 -> MenuListaPontoDeVenda.menuListaPontoDeVenda();
                 case 3 -> MenuEditarPontoDeVenda.menuEditarPontoDeVenda();
                 case 4 -> MenuDeletarPontoDeVenda.menuDeletarPontoDeVenda();

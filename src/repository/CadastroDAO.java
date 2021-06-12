@@ -4,6 +4,7 @@ package repository;
 import model.*;
 
 import javax.swing.*;
+import java.text.DecimalFormat;
 
 public class CadastroDAO {
 		
@@ -47,19 +48,19 @@ public class CadastroDAO {
 
 	public static void cadastrarVenda(Venda venda){
 
-		String query = "INSERT INTO funcionario (cod_venda, cod_ptVenda, cod_fun, cod_produto, qtd_venda)values"
+		DecimalFormat df = new DecimalFormat("##,###.00");
+
+		String query = "INSERT INTO venda (cod_venda, cod_ptVenda, cod_fun, cod_produto, qtd_venda)values"
 				+ "(default, " + venda.getCodPtVenda() + ", " + venda.getCodFun() + ", "
 				+ venda.getCodProduto() + ", " + venda.getQtd() + ")";
 		ConexaoDAO.getInstance().executaSQL(query);
-		JOptionPane.showMessageDialog(null, "Cadastro realizado");
 	}
 
 	public static void cadastrarAbastecimento(Abestecer venda){
 
-		String query = "INSERT INTO funcionario (cod_venda, cod_ptVenda, cod_produto, qtd_venda)values"
+		String query = "INSERT INTO abastecimento (cod_venda, cod_ptVenda, cod_produto, qtd_venda)values"
 				+ "(default, " + venda.getCodPtVenda() + ", "
 				+ venda.getCodProduto() + ", " + venda.getQtd() + ")";
 		ConexaoDAO.getInstance().executaSQL(query);
-		JOptionPane.showMessageDialog(null, "Cadastro realizado");
 	}
 }

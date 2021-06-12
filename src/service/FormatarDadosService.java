@@ -3,6 +3,7 @@ package service;
 
 import javax.swing.text.MaskFormatter;
 import java.text.DateFormat;
+import java.text.DecimalFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
@@ -116,5 +117,11 @@ public class FormatarDadosService {
         FuncionarioCadastradoService.setDataConvertida(fmt.format(ldData));
 
         return FuncionarioCadastradoService.getDataConvertida();
+    }
+
+    public static String formatarPreco(Double preco){
+
+        DecimalFormat df = new DecimalFormat("##,###.00");
+        return df.format(preco);
     }
 }

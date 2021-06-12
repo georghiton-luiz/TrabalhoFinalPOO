@@ -72,7 +72,7 @@ public class Venda{
         this.ldData = ldData;
     }
 
-    @Override
+
     public String toString() {
         return "Venda: " +
                 "\nCódigo da venda: " + VendaCadastradaService.getInstance().getCodVenda() +

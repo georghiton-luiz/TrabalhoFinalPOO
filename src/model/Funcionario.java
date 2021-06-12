@@ -140,25 +140,4 @@ public class Funcionario extends Endereco{
 				"\nRede Social: " + redeSocial +
 				"\n-----------------------------------";
 	}
-
-	public String toStringPtVenda() {
-		return "Funcionario:" +
-				"\nCódigo: " + codigo +
-				"\nCódigo do ponto de venda: " + PontoDeVendaCadastradoService.getInstance().getCodigo() +
-				"\nNome: " + nome +
-				"\nData Nascimento: " + dataNascimento +
-				"\nCPF: " + CPF +
-				"\nLogradouro: " + super.getLogradouro() +
-				"\nNúmero: " + super.getNum() +
-				"\nBairro: " + super.getBairro() +
-				"\nCidade: " + super.getCidade() +
-				"\nEstado: " + super.getUf() +
-				"\nComplemento: " + super.getComplemento() +
-				"\nCEP: " + super.getCEP() +
-				"\nFone: " + fone +
-				"\nCelular: " + celular +
-				"\nE-mail: " + email +
-				"\nRede Social: " + redeSocial +
-				"\n-----------------------------------";
-	}
 }

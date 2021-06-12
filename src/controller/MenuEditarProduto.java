@@ -1,8 +1,6 @@
 package controller;
 
 import repository.EditarProdutoDAO;
-import repository.PesquisarPontoDeVendaDAO;
-import repository.PesquisarProdutoDAO;
 
 import javax.swing.*;
 

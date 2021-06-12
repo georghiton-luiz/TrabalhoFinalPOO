@@ -1,5 +1,6 @@
 package model;
 
+import service.FormatarDadosService;
 import service.PontoDeVendaCadastradoService;
 
 public class Produtos {
@@ -114,8 +115,22 @@ public class Produtos {
 		this.pontoDeVenda = pontoDeVenda;
 	}
 
-	@Override
-	public String toString() {
+
+	public String toStringProduto() {
+		return "Produtos:" +
+				"\nCódigo = " + codigo +
+				"\nCategoria = " + categoria +
+				"\nTipo = " + tipo +
+				"\nTamanho = " + tamanho +
+				"\nModelo = " + modelo +
+				"\nCor = " + cor +
+				"\nQuantidade = " + quantidade +
+				"\nPreco = " + FormatarDadosService.formatarPreco(preco) +
+				"\nDescricao = " + descricao +
+				"\n----------------------------------------------";
+	}
+
+	public String toStringPontoDeVenda() {
 		return "Produtos:" +
 				"\nCódigo = " + codigo +
 				"\nCódigo ponto de venda = " + PontoDeVendaCadastradoService.getInstance().getCodigo() +
@@ -125,7 +140,7 @@ public class Produtos {
 				"\nModelo = " + modelo +
 				"\nCor = " + cor +
 				"\nQuantidade = " + quantidade +
-				"\nPreco = " + preco +
+				"\nPreco = " + FormatarDadosService.formatarPreco(preco) +
 				"\nDescricao = " + descricao +
 				"\n----------------------------------------------";
 	}
